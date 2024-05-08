@@ -39,7 +39,7 @@ error_file_handler.setLevel(logging.ERROR)
 error_file_handler.setFormatter(log_formatter)
 
 # 控制台输出
-console_handler = logging.StreamHandler()
+console_handler = logging.StreamHandler(sys.stdout)
 console_handler.setLevel(logging.INFO)
 console_handler.setFormatter(log_formatter)
 

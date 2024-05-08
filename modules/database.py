@@ -5,9 +5,9 @@ from core.logs import *
 
 class DB:
     
-    data_dir = 'data'
-    db_file = conf.get_database_config().get('name')
-    db_file = os.path.join(data_dir, db_file)
+    data_dir = '/app/data'
+    file_name = conf.get_database_config().get('name')
+    db_file = os.path.join(data_dir, file_name)
     @staticmethod
     def create_table():
         conn = sqlite3.connect(DB.db_file)
