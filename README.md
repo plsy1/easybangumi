@@ -12,6 +12,10 @@
 
 ## Parameters
 
+### Bamgumi
+
+- **BANGUMI_TOKEN**
+
 ### Qbittorrent
 
 - **QBITTORRENT_HOST** 形式为纯IP地址 例如：192.168.0.1

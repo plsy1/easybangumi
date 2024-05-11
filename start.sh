@@ -20,6 +20,9 @@ database:
 rss:
   url: "$RSS_URL"
   scrape: "$RSS_SCRAPE"
+  
+bangumi:
+  token: "$BANGUMI_TOKEN"
 EOF
 
 mv config.yaml /app/conf/config.yaml
