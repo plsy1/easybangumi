@@ -91,6 +91,15 @@ class ConfigManager:
     def get_database_config(self):
         database_config = self.config.get("database", {"name": "data.db"})
         return database_config
-
+    
+    
+    def get_bangumi_config(self):
+        bangumi_config = self.config.get("bangumi", {})
+        required_keys = ["token"]
+        for key in required_keys:
+            if key not in bangumi_config:
+                LOG_ERROR(f"缺少bangumi配置项: {key}")
+                return None
+        return bangumi_config
 
 conf = ConfigManager()

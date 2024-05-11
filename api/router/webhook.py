@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Request
 from api.schemas.response import Response
-from modules.bangumi import Bangumi
+from modules.bangumi import Bangumi, Bangumi_Helper
 router = APIRouter()
 
 @router.post("/", summary="Webhook消息响应", response_model=Response)
@@ -8,7 +8,9 @@ async def webhook_message(request: Request, ):
     data = await request.json()
     print(data)
     if data['Title'] == 'item.markplayed':
-        Bangumi.Set_Episode_Watched(data)
+        if Bangumi_Helper.enable:
+            Bangumi.Set_Episode_Watched(data)
     elif data['Title'] == 'item.markunplayed':
-        Bangumi.Set_Episode_Unwatched(data)
+        if Bangumi_Helper.enable:
+            Bangumi.Set_Episode_Unwatched(data)
     return Response(success=True)

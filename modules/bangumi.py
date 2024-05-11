@@ -2,6 +2,7 @@ import requests
 import json
 import os
 from core.logs import LOG_INFO, LOG_ERROR
+from core.config import conf
 
 from enum import Enum
 from utils.rename import *
@@ -22,7 +23,11 @@ class EpisodeCollectionType(Enum):
     ABANDONED = 3
 
 
+bangumi_config = conf.get_bangumi_config()
 
+token = None
+if bangumi_config:
+    token = bangumi_config['token']
 
 
 class Bangumi_Helper:
@@ -32,6 +37,12 @@ class Bangumi_Helper:
         'accept': 'application/json',
         'User-Agent': 'cy666/my-private-project'
     }
+    token = None
+    enable = False
+    if bangumi_config:
+        token = bangumi_config['token']
+    if token is not None:
+        enable = True
     
     @staticmethod
     def Get_SubjectID_By_Name(name):
