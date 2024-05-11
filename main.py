@@ -10,9 +10,9 @@ from modules.database import DB
 @asynccontextmanager
 async def lifespan(App: FastAPI):
     init_routers()
-    DB.create_table()
-    RSS.Init()
-    Scheduler.run_scheduler()
+    #DB.create_table()
+    #RSS.Init()
+    #Scheduler.run_scheduler()
     yield
     
     

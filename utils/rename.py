@@ -7,12 +7,12 @@ def split_season_title(title):
     if match:
         matched_part = match.group(2)
         rest_part = match.group(1).strip()
-        return f"Season {season_to_number(matched_part)}", rest_part
+        return f"Season {chinese_to_number(matched_part)}", rest_part
     else:
         return "Season 1", title
 
 
-def season_to_number(season_str):
+def chinese_to_number(season_str):
     chinese_to_number = {
         "一": 1,
         "二": 2,
@@ -55,9 +55,8 @@ def get_season_number(text):
     pattern = r".*/*Season (\d+)"
     match = re.search(pattern, text)
     if match:
-        return match.group(1)
+        return int(match.group(1))
     return None
-
 
 def number_to_chinese(number):
     number_to_chinese = {
@@ -73,3 +72,8 @@ def number_to_chinese(number):
         10: "十",
     }
     return number_to_chinese.get(number)
+
+
+def remove_year(text):
+    # 使用正则表达式去除括号及其中的数字部分
+    return re.sub(r'\s*\(\d+\)\s*', '', text)

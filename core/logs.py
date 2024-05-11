@@ -58,5 +58,8 @@ def LOG_ERROR(text, e=None):
         logger.error(f"Error Info: {text} ")
 
 
-def LOG_INFO(text):
-    logger.info(f"Background Info: {text}")
+def LOG_INFO(text,e=None):
+    if not e == None:
+        logger.info(f"Background Info: {text} {e}")
+    else:
+        logger.info(f"Background Info: {text} ")

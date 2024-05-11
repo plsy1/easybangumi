@@ -22,6 +22,7 @@ class Scheduler:
         LOG_INFO('Scheduler Start Successful')
         schedule.every(15).seconds.do(Scheduler.Rename)
         schedule.every(10).minutes.do(Scheduler.Refresh)
+        schedule.every(720).minutes.do(Scheduler.Update_Bangumi_Info)
         while True:
             schedule.run_pending()
             time.sleep(1)
@@ -64,3 +65,8 @@ class Scheduler:
     def Refresh():
         RSS.Refresh()
         RSS.Push()
+
+    @staticmethod
+    def Update_Bangumi_Info():
+        LOG_INFO('Start Refresh Bangumi Episodes Information......')
+        Bangumi.Refresh_Episodes_Information()

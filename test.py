@@ -1,13 +1,9 @@
-from modules.qbittorrent import QB
-from core.config import conf
+from modules.database import *
+from modules.bangumi import *
+from core.rss import RSS, RSS_Type
+DB.create_table()
 
+#RSS.Add('https://mikanani.me/RSS/Bangumi?bangumiId=2833&subgroupid=583',RSS_Type.SINGLE)
+#res = Bangumi_Helper.Get_Total_Episodes_By_SubjectID('328609')
+Bangumi.Refresh_Episodes_Information()
 
-
-
-torrents = QB.qb.torrents_info()
-for torrent in torrents:
-    tags = torrent.get('tags')
-    tags = tags.split(', ')
-    if conf.config['qbittorrent']['tag'] not in tags: continue
-    torrent_hash = torrent.get("hash")
-    QB.add_tag_by_hash(tag='已整理', hash = torrent_hash)

@@ -5,7 +5,8 @@ from core.logs import *
 
 class DB:
     
-    data_dir = '/app/data'
+    #data_dir = '/app/data'
+    data_dir = 'data'
     file_name = conf.get_database_config().get('name')
     db_file = os.path.join(data_dir, file_name)
     @staticmethod
@@ -43,10 +44,51 @@ class DB:
                         (id INTEGER PRIMARY KEY AUTOINCREMENT,
                         link TEXT)"""
         )
+        
+        c.execute('''CREATE TABLE IF NOT EXISTS bangumi (
+                subject_name TEXT UNIQUE,
+                subject_id TEXT,
+                episodes TEXT,
+                total_episodes INTEGER
+             )''')
 
         conn.commit()
         conn.close()
 
+    
+    @staticmethod
+    def bangumi_get_subject_info_by_subject_name(subject_name):
+        conn = sqlite3.connect(DB.db_file)
+        c = conn.cursor()
+        
+        c.execute("SELECT subject_id, episodes,total_episodes FROM bangumi WHERE subject_name = ?", (subject_name,))
+        result = c.fetchone()
+        return result
+        
+        
+    @staticmethod
+    def bangumi_update(item):
+        conn = sqlite3.connect(DB.db_file)
+        c = conn.cursor()
+        c.execute('''INSERT OR REPLACE INTO bangumi (subject_name, subject_id, episodes, total_episodes) 
+                 VALUES (?, ?, ?, ?)''',
+              (item["subject_name"], item["subject_id"], item["episodes"],item['total_episodes']))
+        conn.commit()
+        conn.close()
+        
+    @staticmethod
+    def rss_single_get_by_title_and_season(title, season):
+        conn = sqlite3.connect(DB.db_file)
+        c = conn.cursor()
+        
+        # 执行查询并返回匹配的条目
+        c.execute("SELECT * FROM rss_single WHERE title = ? AND season = ?", (title, season))
+        result = c.fetchone()
+        
+        conn.close()
+        return result[4] if result else None
+    
+    
     @staticmethod
     def old_rss_items_insert(item):
         conn = sqlite3.connect(DB.db_file)

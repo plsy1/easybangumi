@@ -160,6 +160,7 @@ class RSS:
                     Id = single_link[0]
                     for Item in Items:
                         DB.rss_items_insert(Item,Id)
+            #在这里添加banguminame
         except Exception as e:
                 LOG_ERROR(e)
                       
