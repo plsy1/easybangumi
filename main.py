@@ -7,12 +7,17 @@ from core.scheduler import Scheduler
 from core.rss import RSS
 from modules.database import DB
 
+def init():
+    init_routers()
+    DB.create_table()
+    RSS.Init()
+    Scheduler.run_scheduler()
+
+
+
 @asynccontextmanager
 async def lifespan(App: FastAPI):
-    init_routers()
-    #DB.create_table()
-    #RSS.Init()
-    #Scheduler.run_scheduler()
+    init()
     yield
     
     

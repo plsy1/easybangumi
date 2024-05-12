@@ -185,7 +185,33 @@ class Bangumi:
                 if Bangumi_Helper.Set_Episode_Status_By_Id(episode_number,EpisodeCollectionType.WATCHED):
                     LOG_INFO(f"{bangumi_title} E{episode} Set Watched Success.")
             else:
-                LOG_ERROR("Can Not Find Bangumi Title.")
+                LOG_ERROR("Can Not Find Bangumi Title In Database.")
+                LOG_INFO("Trying To Get From Bangumi......")
+                season = get_season_number(season)
+                if season != 1:
+                    season = number_to_chinese(season)
+                    season =f'第{season}季'
+                    bangumi_title = f'{title} {season}'
+                else:
+                    bangumi_title = title
+                    
+                print(bangumi_title)
+                    
+                
+                subject_id = Bangumi_Helper.Get_SubjectID_By_Name(bangumi_title)
+                episodes_info = Bangumi_Helper.Get_Episodes_By_SubjectID(subject_id)
+                print(episodes_info)
+                total_episodes = Bangumi_Helper.Get_Total_Episodes_By_SubjectID(subject_id)
+                
+                if int(total_episodes) == int(episode):
+                    Bangumi_Helper.Set_Bangumi_Status(subject_id,type=CollectionType.WATCHED)
+                #if int(episode) == 1:
+                Bangumi_Helper.Set_Bangumi_Status(subject_id,type=CollectionType.WATCHING)
+                episode_number = episodes_info[int(episode)]
+                if Bangumi_Helper.Set_Episode_Status_By_Id(episode_number,EpisodeCollectionType.WATCHED):
+                    LOG_INFO(f"{bangumi_title} E{episode} Set Watched Success.")
+                
+                
         except Exception as e:
             LOG_ERROR("Set Episode Watched failed:",e)
             
@@ -215,7 +241,29 @@ class Bangumi:
                     LOG_INFO(f"{bangumi_title} E{episode} Set Unwatched Success.")
                 
             else:
-                LOG_ERROR("Can Not Find Bangumi Title.")
+                LOG_ERROR("Can Not Find Bangumi Title In Database.")
+                LOG_INFO("Trying To Get From Bangumi......")
+                season = get_season_number(season)
+                if season != 1:
+                    season = number_to_chinese(season)
+                    season =f'第{season}季'
+                    bangumi_title = f'{title} {season}'
+                else:
+                    bangumi_title = title
+                    
+                print(bangumi_title)
+                    
+                
+                subject_id = Bangumi_Helper.Get_SubjectID_By_Name(bangumi_title)
+                episodes_info = Bangumi_Helper.Get_Episodes_By_SubjectID(subject_id)
+                print(episodes_info)
+                total_episodes = Bangumi_Helper.Get_Total_Episodes_By_SubjectID(subject_id)
+                
+                if int(total_episodes) == int(episode):
+                    Bangumi_Helper.Set_Bangumi_Status(subject_id,type=CollectionType.WATCHING)
+                episode_number = episodes_info[int(episode)]
+                if Bangumi_Helper.Set_Episode_Status_By_Id(episode_number,EpisodeCollectionType.NOTCOLLECTED):
+                    LOG_INFO(f"{bangumi_title} E{episode} Set Unwatched Success.")
         except Exception as e:
             LOG_ERROR("Set Episode Unwatched Failed:",e)         
 
