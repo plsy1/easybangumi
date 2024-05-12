@@ -6,7 +6,6 @@ router = APIRouter()
 @router.post("/", summary="Webhook消息响应", response_model=Response)
 async def webhook_message(request: Request, ):
     data = await request.json()
-    print(data)
     if data['Title'] == 'item.markplayed':
         if Bangumi_Helper.enable:
             Bangumi.Set_Episode_Watched(data)
