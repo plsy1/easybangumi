@@ -1,50 +1,54 @@
-# easybangumi 自动追番
+# easybangumi 追番助手
 
-### Features
+## Features
 
-- 订阅自动下载
-- 番剧自动重命名
-- 推送更新通知
-- 添加订阅、收集订阅功能
-- 可选择的剧集目录格式
-  - TMDB格式：Title/Season x/SXXEYY
-  - Bangumi格式：Title/Season 1/S01EYY
+- ✅ Automatically download subscribed anime
+- ✅ Automatically rename anime episodes
+- ✅ Receive updates notifications
+- ✅ Add, collect, and delete subscriptions
+- ✅ Flexible episode directory formats
+  - TMDB format: Title/Season x/SXXEYY
+  - Bangumi format: Title/Season 1/S01EYY
+- ✅ Automatically update Bangumi Grid View (Based on file paths, ensures successful updates for subscribed content, and usually works for non-subscribed content)
+  - Enable for TMDB episode directory format
+  - Disable for Bangumi episode directory format (for now)
 
 ## Parameters
 
 ### Bamgumi
 
-- **BANGUMI_TOKEN**
+- 📺 **BANGUMI_TOKEN**
 
 ### Qbittorrent
 
-- **QBITTORRENT_HOST** 形式为纯IP地址 例如：192.168.0.1
-
-- **QBITTORRENT_PORT** QB端口 
-
-- **QBITTORRENT_USERNAME** 用户名
-
-- **QBITTORRENT_PASSWORD** 密码
-
-- **QBITTORRENT_ROOT_FOLDER** 根文件目录 番剧将被下载到里
-
-- **QBITTORRENT_TAG** 种子标签，可不填，默认为easybangumi
+- 🌐 **QBITTORRENT_HOST**: Format as pure IP address e.g., 192.168.0.1
+- 🔌 **QBITTORRENT_PORT**: QB port
+- 👤 **QBITTORRENT_USERNAME**: Username
+- 🔒 **QBITTORRENT_PASSWORD**: Password
+- 📁 **QBITTORRENT_ROOT_FOLDER**: Root directory where anime will be downloaded
+- 🔖 **QBITTORRENT_TAG**: Torrent tag, optional, default is easybangumi
 
 ### RSS
 
-- **RSS_URL** 账号RSS地址
+- 📡 **RSS_URL**: Account RSS feed URL
+- 🔄 **RSS_SCRAPE**: Can be set to TMDB or Bangumi, default is TMDB
 
-- **RSS_SCRAPE** 可设置为TMDB或Bangumi，默认为TMDB
+### Telegram (Optional, for receiving anime update notifications)
 
-### Telegram 用于发送番剧更新提醒 可选
+- 🤖 **TELEGRAM_TOKEN**: Token obtained by creating a bot
+- 💬 **TELEGRAM_CHAT_ID**: Chat ID of group/user
 
-- **TELEGRAM_TOKEN**  创建机器人获得
+## Deployment
 
-- **TELEGRAM_CHAT_ID** 群组/用户的chatid
+### Building Image
 
-## 部署
+```shell
+git clone https://github.com/plsy1/easybangumi
+cd easybangumi
+docker build -t easybangumi .
+```
 
-#### Docker Cli
+### Docker Cli
 ```bash
 docker run  \
 --name easybangumi \
@@ -61,7 +65,9 @@ docker run  \
 -e DATABASE_NAME="data.db" \ #optional
 -e RSS_URL="your account rss url" \
 -e RSS_SCRAPE="TMDB" \ #optional
+-e BANGUMI_TOKEN="your token" \ #optional
 -v /path/to/your/data.db:/app/data.db \
+-p 18964:18964 \ #"The backend address, visit /docs to view the API documentation."
 easybangumi
 ```
 
