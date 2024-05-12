@@ -5,8 +5,8 @@ from core.logs import *
 
 class DB:
     
-    #data_dir = '/app/data'
-    data_dir = 'data'
+    data_dir = '/app/data'
+    #data_dir = 'data'
     file_name = conf.get_database_config().get('name')
     db_file = os.path.join(data_dir, file_name)
     @staticmethod
