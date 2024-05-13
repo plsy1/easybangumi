@@ -12,9 +12,9 @@ class RSS_Type(Enum):
     GATHER = 2
     
 class RSS_INFO(Enum):
-    REFRESH = '开始刷新订阅'
-    FINDRSS = '开始查找订阅源'
-    FAILEDRSS = '订阅添加失败'
+    REFRESH = 'Find New Torrents From'
+    FINDRSS = 'Found New Subscription'
+    FAILEDRSS = 'Subscription Addition Failure'
 
 
 class RSS_Helper():
@@ -139,10 +139,8 @@ class RSS:
                 if Items is None:
                     continue
                 for Item in Items:
-                    itemlink = Item['link']
                     if DB.rss_items_is_link_exist_and_pushed(Item['link']):
                         continue;
-                    LOG_INFO(f'{RSS_INFO.FINDRSS.value} {itemlink}')
                     link = RSS_Helper.get_rss_link_from_torrent_info_page_link(Item['link'])
                     bangumi_title = RSS_Helper.get_title_from_torrent_info_page_link(Item['link'])
                     season, title = split_season_title(bangumi_title)
@@ -151,16 +149,16 @@ class RSS:
                         continue;
                     item = (link,title,season,bangumi_title)
                     DB.rss_single_insert(item)
+                    LOG_INFO(f'{RSS_INFO.FINDRSS.value} {bangumi_title}')
             single_links = DB.rss_single_get_all()
             for single_link in single_links:
-                LOG_INFO(f'{RSS_INFO.REFRESH.value} {single_link}')
+                LOG_INFO(f'{RSS_INFO.REFRESH.value} {single_link[4]}')
                 link = single_link[1]
                 Items = Parse.Mikan(link)
                 if Items is not None:
                     Id = single_link[0]
                     for Item in Items:
                         DB.rss_items_insert(Item,Id)
-            #在这里添加banguminame
         except Exception as e:
                 LOG_ERROR(e)
                       
