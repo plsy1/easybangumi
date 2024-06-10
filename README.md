@@ -9,7 +9,7 @@
 - ✅ Flexible episode directory formats
   - TMDB format: Title/Season x/SXXEYY
   - Bangumi format: Title/Season 1/S01EYY
-- ✅ Automatically update Bangumi Grid View (Based on file paths, ensures successful updates for subscribed content, and usually works for non-subscribed content)
+- ✅ Automatically update Bangumi watching progress (Based on file paths, subscribed anime always succeeds, non-subscribed anime usually works as well)
   - Enable for TMDB episode directory format
   - Disable for Bangumi episode directory format (for now)
 
@@ -17,7 +17,7 @@
 
 ### Bamgumi
 
-- 📺 **BANGUMI_TOKEN**
+- 📺 **BANGUMI_TOKEN**: [Bangumi token of your account](https://next.bgm.tv/demo/access-token)
 
 ### Qbittorrent
 
@@ -30,8 +30,8 @@
 
 ### RSS
 
-- 📡 **RSS_URL**: Account RSS feed URL
-- 🔄 **RSS_SCRAPE**: Can be set to TMDB or Bangumi, default is TMDB
+- 📡 **RSS_URL**: RSS subscription link from [Mikan Project](https://mikanani.me/home/mybangumi)
+- 🔄 **RSS_SCRAPE**: Can be set to `TMDB` or `Bangumi`, default is `TMDB`
 
 ### Telegram (Optional, for receiving anime update notifications)
 
