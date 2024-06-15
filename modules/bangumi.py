@@ -93,7 +93,7 @@ class Bangumi_Helper:
         url = f"https://api.bgm.tv/v0/users/-/collections/-/episodes/{episode_id}"
         headers = {
             "accept": "*/*",
-            'User-Agent': 'cy666/my-private-project',
+            'User-Agent': 'plsy1/easybangumi (https://github.com/plsy1/easybangumi)',
             "Authorization": f"Bearer {Bangumi_Helper.token}",
             "Content-Type": "application/json"
         }
@@ -115,7 +115,7 @@ class Bangumi_Helper:
         url = f"https://api.bgm.tv/v0/users/-/collections/{bangumi_id}"
         headers = {
             "accept": "*/*",
-            'User-Agent': 'cy666/my-private-project',
+            'User-Agent': 'plsy1/easybangumi (https://github.com/plsy1/easybangumi)',
             "Authorization": f"Bearer {Bangumi_Helper.token}",
             "Content-Type": "application/json"
         }
