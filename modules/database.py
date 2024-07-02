@@ -237,6 +237,7 @@ class DB:
 
     @staticmethod
     def rss_single_get_all():
+        DB.update_download_status()
         conn = sqlite3.connect(DB.db_file)
         c = conn.cursor()
         c.execute("""
