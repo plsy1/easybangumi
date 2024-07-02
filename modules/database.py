@@ -52,6 +52,16 @@ class DB:
                 total_episodes INTEGER
              )''')
 
+        c.execute(
+        """CREATE TABLE IF NOT EXISTS download_status
+            (rss_single_id INTEGER PRIMARY KEY,
+            item_count INTEGER,
+            total_episodes INTEGER,
+            download_finished BOOLEAN DEFAULT FALSE
+            )"""
+        )
+        
+        
         conn.commit()
         conn.close()
 
@@ -229,7 +239,15 @@ class DB:
     def rss_single_get_all():
         conn = sqlite3.connect(DB.db_file)
         c = conn.cursor()
-        c.execute("SELECT * FROM rss_single")
+        c.execute("""
+            SELECT *
+            FROM rss_single
+            WHERE id IN (
+                SELECT rss_single_id
+                FROM download_status
+                WHERE download_finished = 0
+            )
+        """)
         items = c.fetchall()
         conn.close()
         return items
@@ -302,3 +320,48 @@ class DB:
         conn.commit()
         conn.close()
         return True
+    
+    
+    @staticmethod
+    def update_download_status():
+        conn = sqlite3.connect(DB.db_file)
+        c = conn.cursor()
+        c.execute("""
+            SELECT rss_single_id, COUNT(*) as item_count
+            FROM rss_items
+            GROUP BY rss_single_id
+        """)
+        rss_items_counts = c.fetchall()
+
+        for rss_single_id, item_count in rss_items_counts:
+            c.execute("""
+                SELECT bangumi_title
+                FROM rss_single
+                WHERE id = ?
+            """, (rss_single_id,))
+            bangumi_title = c.fetchone()
+
+            if bangumi_title:
+                bangumi_title = bangumi_title[0]
+                c.execute("""
+                    SELECT total_episodes
+                    FROM bangumi
+                    WHERE subject_name = ?
+                """, (bangumi_title,))
+                total_episodes = c.fetchone()
+
+                if total_episodes:
+                    total_episodes = total_episodes[0]
+                    download_finished = item_count == total_episodes
+
+                    # Insert or update the download_status table
+                    c.execute("""
+                        INSERT OR REPLACE INTO download_status
+                        (rss_single_id, item_count, total_episodes, download_finished)
+                        VALUES (?, ?, ?, ?)
+                    """, (rss_single_id, item_count, total_episodes, download_finished))
+
+
+        conn.commit()
+        conn.close()
+

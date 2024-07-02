@@ -23,6 +23,7 @@ class Scheduler:
         schedule.every(15).seconds.do(Scheduler.Rename)
         schedule.every(10).minutes.do(Scheduler.Refresh)
         schedule.every(720).minutes.do(Scheduler.Update_Bangumi_Info)
+        schedule.every(1440).minutes.do(Scheduler.Update_Download_Status)
         
         while True:
             schedule.run_pending()
@@ -72,3 +73,7 @@ class Scheduler:
         if Bangumi_Helper.token is not None:
             LOG_INFO('Start Refresh Bangumi Episodes Information......')
             Bangumi.Refresh_Episodes_Information()
+            
+    @staticmethod
+    def Update_Download_Status():
+        DB.update_download_status()
