@@ -4,11 +4,12 @@ from core.logs import *
 
 
 class DB:
-    
-    data_dir = '/app/data'
-    #data_dir = 'data'
-    file_name = conf.get_database_config().get('name')
+
+    data_dir = "/app/data"
+    # data_dir = 'data'
+    file_name = conf.get_database_config().get("name")
     db_file = os.path.join(data_dir, file_name)
+
     @staticmethod
     def create_table():
         conn = sqlite3.connect(DB.db_file)
@@ -38,67 +39,76 @@ class DB:
                 )"""
         )
 
-
         c.execute(
             """CREATE TABLE IF NOT EXISTS rss_gather
                         (id INTEGER PRIMARY KEY AUTOINCREMENT,
                         link TEXT)"""
         )
-        
-        c.execute('''CREATE TABLE IF NOT EXISTS bangumi (
+
+        c.execute(
+            """CREATE TABLE IF NOT EXISTS bangumi (
                 subject_name TEXT UNIQUE,
                 subject_id TEXT,
                 episodes TEXT,
                 total_episodes INTEGER
-             )''')
+             )"""
+        )
 
         c.execute(
-        """CREATE TABLE IF NOT EXISTS download_status
+            """CREATE TABLE IF NOT EXISTS download_status
             (rss_single_id INTEGER PRIMARY KEY,
             item_count INTEGER,
             total_episodes INTEGER,
             download_finished BOOLEAN DEFAULT FALSE
             )"""
         )
-        
-        
+
         conn.commit()
         conn.close()
 
-    
     @staticmethod
     def bangumi_get_subject_info_by_subject_name(subject_name):
         conn = sqlite3.connect(DB.db_file)
         c = conn.cursor()
-        
-        c.execute("SELECT subject_id, episodes,total_episodes FROM bangumi WHERE subject_name = ?", (subject_name,))
+
+        c.execute(
+            "SELECT subject_id, episodes,total_episodes FROM bangumi WHERE subject_name = ?",
+            (subject_name,),
+        )
         result = c.fetchone()
         return result
-        
-        
+
     @staticmethod
     def bangumi_update(item):
         conn = sqlite3.connect(DB.db_file)
         c = conn.cursor()
-        c.execute('''INSERT OR REPLACE INTO bangumi (subject_name, subject_id, episodes, total_episodes) 
-                 VALUES (?, ?, ?, ?)''',
-              (item["subject_name"], item["subject_id"], item["episodes"],item['total_episodes']))
+        c.execute(
+            """INSERT OR REPLACE INTO bangumi (subject_name, subject_id, episodes, total_episodes) 
+                 VALUES (?, ?, ?, ?)""",
+            (
+                item["subject_name"],
+                item["subject_id"],
+                item["episodes"],
+                item["total_episodes"],
+            ),
+        )
         conn.commit()
         conn.close()
-        
+
     @staticmethod
     def rss_single_get_by_title_and_season(title, season):
         conn = sqlite3.connect(DB.db_file)
         c = conn.cursor()
-        
+
         # 执行查询并返回匹配的条目
-        c.execute("SELECT * FROM rss_single WHERE title = ? AND season = ?", (title, season))
+        c.execute(
+            "SELECT * FROM rss_single WHERE title = ? AND season = ?", (title, season)
+        )
         result = c.fetchone()
-        
+
         conn.close()
         return result[4] if result else None
-    
-    
+
     @staticmethod
     def old_rss_items_insert(item):
         conn = sqlite3.connect(DB.db_file)
@@ -184,7 +194,9 @@ class DB:
         try:
             conn = sqlite3.connect(DB.db_file)
             c = conn.cursor()
-            c.execute("UPDATE rss_items SET pushed_to_downloader=1 WHERE title=?", (title,))
+            c.execute(
+                "UPDATE rss_items SET pushed_to_downloader=1 WHERE title=?", (title,)
+            )
             conn.commit()
             conn.close()
         except Exception as e:
@@ -240,7 +252,8 @@ class DB:
         DB.update_download_status()
         conn = sqlite3.connect(DB.db_file)
         c = conn.cursor()
-        c.execute("""
+        c.execute(
+            """
             SELECT *
             FROM rss_single
             WHERE id IN (
@@ -248,7 +261,8 @@ class DB:
                 FROM download_status
                 WHERE download_finished = 0
             )
-        """)
+        """
+        )
         items = c.fetchall()
         conn.close()
         return items
@@ -261,7 +275,7 @@ class DB:
         result = c.fetchone()
         conn.close()
         return result is not None
-    
+
     @staticmethod
     def rss_single_delete_by_id(id):
         conn = sqlite3.connect(DB.db_file)
@@ -312,7 +326,7 @@ class DB:
         result = c.fetchone()
         conn.close()
         return result is not None
-    
+
     @staticmethod
     def rss_gather_delete_by_id(id):
         conn = sqlite3.connect(DB.db_file)
@@ -321,48 +335,43 @@ class DB:
         conn.commit()
         conn.close()
         return True
-    
-    
+
     @staticmethod
     def update_download_status():
         conn = sqlite3.connect(DB.db_file)
         c = conn.cursor()
-        c.execute("""
-            SELECT rss_single_id, COUNT(*) as item_count
-            FROM rss_items
-            GROUP BY rss_single_id
-        """)
-        rss_items_counts = c.fetchall()
 
-        for rss_single_id, item_count in rss_items_counts:
-            c.execute("""
-                SELECT bangumi_title
-                FROM rss_single
-                WHERE id = ?
-            """, (rss_single_id,))
-            bangumi_title = c.fetchone()
+        c.execute("SELECT id, bangumi_title FROM rss_single")
+        rss_singles = c.fetchall()
 
-            if bangumi_title:
-                bangumi_title = bangumi_title[0]
-                c.execute("""
-                    SELECT total_episodes
-                    FROM bangumi
-                    WHERE subject_name = ?
-                """, (bangumi_title,))
-                total_episodes = c.fetchone()
+        for rss_single in rss_singles:
+            rss_single_id, bangumi_title = rss_single
 
-                if total_episodes:
-                    total_episodes = total_episodes[0]
-                    download_finished = item_count == total_episodes
+            c.execute(
+                "SELECT COUNT(*) FROM rss_items WHERE rss_single_id = ?",
+                (rss_single_id,),
+            )
+            item_count = c.fetchone()[0]
 
-                    # Insert or update the download_status table
-                    c.execute("""
-                        INSERT OR REPLACE INTO download_status
-                        (rss_single_id, item_count, total_episodes, download_finished)
-                        VALUES (?, ?, ?, ?)
-                    """, (rss_single_id, item_count, total_episodes, download_finished))
+            c.execute(
+                "SELECT total_episodes FROM bangumi WHERE subject_name = ?",
+                (bangumi_title,),
+            )
+            bangumi = c.fetchone()
+            if bangumi:
+                total_episodes = bangumi[0]
 
+                download_finished = item_count == total_episodes
+
+            else:
+                total_episodes = None
+                download_finished = False
+
+            c.execute(
+                """INSERT OR REPLACE INTO download_status (rss_single_id, item_count, total_episodes, download_finished)
+                VALUES (?, ?, ?, ?)""",
+                (rss_single_id, item_count, total_episodes, download_finished),
+            )
 
         conn.commit()
         conn.close()
-
