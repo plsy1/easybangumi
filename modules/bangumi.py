@@ -133,6 +133,18 @@ class Bangumi_Helper:
         
 
 class Bangumi:
+    
+    @staticmethod
+    def Init_Episodes_Information_By_Bangumi_Title(title):
+        try:
+            subject_id = Bangumi_Helper.Get_SubjectID_By_Name(title)
+            episodes = Bangumi_Helper.Get_Episodes_By_SubjectID(subject_id)
+            total_episodes = Bangumi_Helper.Get_Total_Episodes_By_SubjectID(subject_id)
+            episodes_str = json.dumps(episodes)
+            DB.bangumi_update({"subject_name": title, "subject_id": subject_id, "episodes": episodes_str,"total_episodes": total_episodes})
+        except Exception as e:
+            LOG_ERROR("Init Episodes Information failed:",e)
+                   
     @staticmethod
     def Refresh_Episodes_Information():
         try:

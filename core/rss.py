@@ -149,6 +149,7 @@ class RSS:
                         continue;
                     item = (link,title,season,bangumi_title)
                     DB.rss_single_insert(item)
+                    Bangumi.Init_Episodes_Information_By_Bangumi_Title(bangumi_title)
                     LOG_INFO(f'{RSS_INFO.FINDRSS.value} {bangumi_title}')
             single_links = DB.rss_single_get_all()
             for single_link in single_links:
