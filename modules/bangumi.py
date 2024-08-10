@@ -187,11 +187,11 @@ class Bangumi:
                 info = DB.bangumi_get_subject_info_by_subject_name(bangumi_title)
                 subject_id = info[0]
                 episodes_info = info[1]
-                total_episodes = info[2]
-                if int(total_episodes) == int(episode):
+                total_episodes = info[2]                
+                if int(episode) == 1:
+                    Bangumi_Helper.Set_Bangumi_Status(subject_id,type=CollectionType.WATCHING)
+                elif int(total_episodes) == int(episode):
                     Bangumi_Helper.Set_Bangumi_Status(subject_id,type=CollectionType.WATCHED)
-                #if int(episode) == 1:
-                Bangumi_Helper.Set_Bangumi_Status(subject_id,type=CollectionType.WATCHING)
                 episodes_info = json.loads(episodes_info)
                 episode_number = episodes_info.get(episode)
                 if Bangumi_Helper.Set_Episode_Status_By_Id(episode_number,EpisodeCollectionType.WATCHED):
