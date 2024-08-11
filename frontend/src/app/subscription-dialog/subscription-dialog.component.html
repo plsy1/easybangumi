@@ -1,0 +1,11 @@
+<div class="dialog-container">
+  <div class="dialog-header">添加订阅</div>
+  <mat-form-field>
+    <mat-label>订阅地址</mat-label>
+    <input matInput [(ngModel)]="subscriptionText" />
+  </mat-form-field>
+  <div class="dialog-footer">
+    <button mat-button (click)="submit()">确定</button>
+    <button mat-button (click)="close()">取消</button>
+  </div>
+</div>

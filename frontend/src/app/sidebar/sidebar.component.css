@@ -1,0 +1,47 @@
+.sidebar {
+  width: 5%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgb(96, 93, 200), rgb(80, 80, 150)); /* 渐变色背景 */
+  color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 20px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3); /* 更强的阴影效果 */
+  border-radius: 0 15px 15px 0; /* 更圆的圆角 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: width 0.3s; /* 平滑的宽度过渡 */
+}
+
+.sidebar:hover {
+  width: 8%; /* 鼠标悬停时扩展宽度 */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.sidebar ul li {
+  margin: 20px 0; /* 增加间距 */
+  width: 100%;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s; /* 添加平滑过渡效果 */
+}
+
+.sidebar ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.3); /* 更透明的白色 */
+  color: rgb(96, 93, 200); /* 在悬停时改变文字颜色 */
+  transform: translateX(5px); /* 鼠标悬停时微移效果 */
+}

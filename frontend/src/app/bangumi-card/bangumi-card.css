@@ -1,0 +1,108 @@
+.listing-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* 调整卡片之间的间距 */
+  justify-content: center; /* 居中对齐卡片容器 */
+}
+
+.listing {
+  display: flex;
+  flex-direction: column;
+  background: var(--accent-color);
+  border-radius: 12px;
+  padding: 0; /* 移除内边距以更好地控制比例 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 300px; /* 固定宽度 */
+  height: 400px; /* 固定高度 */
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.listing:hover {
+  transform: scale(1.05); /* 鼠标悬停时放大卡片 */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* 增强阴影效果 */
+  background-color: rgba(96, 93, 200, 0.9); /* 悬停时的背景色 */
+}
+
+.listing-photo {
+  width: 100%; /* 图片宽度适应卡片宽度 */
+  height: 80%; /* 图片区域占卡片高度的 80% */
+  object-fit: cover; /* 确保图片完全填充区域 */
+  border-radius: 12px 12px 0 0; /* 圆角效果 */
+  transition: transform 0.5s ease; /* 图片过渡效果 */
+}
+
+.listing:hover .listing-photo {
+  transform: scale(1.05); /* 图片悬停时放大效果 */
+}
+
+.listing-heading {
+  width: 100%; /* 宽度适应卡片宽度 */
+  font-size: 1.2rem; /* 标题字体大小 */
+  font-weight: 700; /* 粗体字 */
+  margin: 10px 0; /* 外边距 */
+  text-align: center; /* 居中对齐 */
+  color: var(--primary-color); /* 标题颜色 */
+  overflow: hidden; /* 隐藏超出部分 */
+  white-space: nowrap; /* 不换行 */
+  text-overflow: ellipsis; /* 超出部分用省略号表示 */
+}
+
+.listing-heading:hover {
+  color: rgba(96, 93, 200, 1); /* 标题悬停时的颜色 */
+}
+
+.listing-location {
+  width: 100%; /* 宽度适应卡片宽度 */
+  font-size: 0.9rem; /* 位置字体大小 */
+  color: #444; /* 文字颜色 */
+  padding: 8px 0; /* 内边距 */
+  text-align: center; /* 居中对齐 */
+  transition: color 0.3s ease; /* 文字颜色过渡效果 */
+}
+
+.listing-location:hover {
+  color: rgba(96, 93, 200, 0.8); /* 位置悬停时的颜色 */
+}
+
+section.listing button {
+  background: none; /* 去掉按钮背景 */
+  color: var(--primary-color); /* 字体颜色 */
+  border: 2px solid var(--primary-color); /* 边框颜色 */
+  border-radius: 4px; /* 圆角边框 */
+  padding: 10px 15px; /* 内边距 */
+  font-size: 0.9rem; /* 调整字体大小 */
+  font-weight: 600; /* 加粗字体 */
+  text-transform: uppercase; /* 文字大写 */
+  cursor: pointer; /* 鼠标指针样式 */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* 过渡效果 */
+  outline: none; /* 去掉焦点轮廓 */
+  background-color: transparent; /* 背景透明 */
+}
+
+.listing-location {
+  width: 100%; /* 宽度适应卡片宽度 */
+  font-size: 0.9rem; /* 字体大小 */
+  color: #555; /* 文字颜色 */
+  padding: 8px 12px; /* 内边距 */
+  text-align: center; /* 居中对齐 */
+  background-color: #f0f0f0; /* 背景颜色 */
+  border: 1px solid #ddd; /* 边框颜色 */
+  border-radius: 8px; /* 圆角边框 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+  font-family: 'Arial', sans-serif; /* 字体类型 */
+  transition: background-color 0.3s ease, color 0.3s ease; /* 过渡效果 */
+}
+
+.listing-location:hover {
+  background-color: #e0e0e0; /* 鼠标悬停时的背景颜色 */
+  color: var(--primary-color); /* 鼠标悬停时的文字颜色 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 鼠标悬停时的阴影效果 */
+}
+
+.listing-location::before {
+  margin-right: 5px; /* 图标与文字之间的间距 */
+}

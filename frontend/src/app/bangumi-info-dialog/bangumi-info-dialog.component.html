@@ -1,0 +1,9 @@
+<h2 mat-dialog-title>{{ data.title }}</h2>
+<mat-dialog-content>
+    <img [src]="data.img" alt="{{ data.title }}" class="dialog-image">
+    <p><strong>季度:</strong> {{ data.season }}</p>
+</mat-dialog-content>
+<div mat-dialog-actions class="dialog-footer">
+  <button mat-button class="action-btn" (click)="deleteSubscription(data.id.toString())">取消订阅</button>
+  <button mat-button class="action-btn" (click)="close()">关闭</button>
+</div>

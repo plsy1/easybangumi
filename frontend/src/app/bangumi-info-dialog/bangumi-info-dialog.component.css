@@ -1,0 +1,124 @@
+/* 对话框容器样式 */
+.mat-dialog-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 400px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+  }
+  
+  /* 对话框标题样式 */
+  .mat-dialog-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--primary-color); /* 主要颜色 */
+  }
+  
+  /* 对话框内容样式 */
+  .dialog-content {
+    padding: 10px 0;
+  }
+  
+  .dialog-content p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #333; /* 文本颜色 */
+  }
+  
+  /* 对话框操作按钮样式 */
+  .dialog-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  button[mat-button] {
+    margin-left: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px; /* 圆角边框 */
+  }
+  
+  button[mat-button]:first-child {
+    background-color: rgb(96, 93, 200); /* 主色调 */
+    color: white; /* 白色文字 */
+  }
+  
+  button[mat-button]:last-child {
+    background-color: #f5f5f5; /* 背景颜色 */
+    color: #757575; /* 字体颜色 */
+  }
+
+  
+
+
+
+  /**/
+
+  mat-dialog-container {
+    max-width: 600px; /* 最大宽度 */
+    max-height: 80vh; /* 最大高度，vh 是视口高度的百分比 */
+    width: 100%; /* 宽度占满父容器 */
+    padding: 20px; /* 内边距 */
+    box-sizing: border-box; /* 包含内边距在内的盒子模型 */
+}
+
+mat-dialog-content {
+    overflow-y: auto; /* 如果内容超过对话框高度，则滚动 */
+    text-align: center; /* 内容居中 */
+    padding: 20px; /* 内边距 */
+}
+
+.dialog-image {
+  width: 100%; /* 图片宽度设置为占满容器 */
+  height: auto; /* 高度自动调整，保持宽高比 */
+  max-height: 50vh; /* 限制图片的最大高度为视口高度的 50% */
+  object-fit: contain; /* 确保图片缩放时保持内容完整 */
+  border-radius: 8px; /* 圆角效果 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影 */
+  margin: 20px 0; /* 上下间距 */
+}
+
+mat-dialog-title {
+    font-size: 24px; /* 标题字体大小 */
+    font-weight: bold; /* 标题字体加粗 */
+    margin-bottom: 10px; /* 标题下方间距 */
+    color: rgb(96, 93, 200); /* 使用强调色 */
+    text-align: center; /* 标题居中 */
+}
+
+.dialog-footer {
+    display: flex;
+    justify-content: space-between; /* 按钮均匀分布 */
+    padding: 10px 20px; /* 内边距 */
+    border-top: 1px solid #e0e0e0; /* 上边框 */
+}
+
+.action-btn {
+    background-color: rgb(96, 93, 200); /* 使用强调色作为按钮背景 */
+    color: white; /* 白色字体 */
+    border: none;
+    border-radius: 4px; /* 圆角按钮 */
+    padding: 10px 20px; /* 按钮内边距 */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* 过渡效果 */
+}
+
+.action-btn:hover {
+    background-color: rgb(80, 80, 150); /* 悬停时改变背景色 */
+    transform: translateY(-2px); /* 悬停时按钮轻微上移 */
+}
+
+.action-btn:active {
+    transform: translateY(1px); /* 按下时按钮轻微下移 */
+}
