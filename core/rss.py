@@ -84,6 +84,9 @@ class RSS:
                     return None
                 item = (link,title,season,bangumi_title)
                 DB.rss_single_insert(item)
+                ## 初始化剧集信息
+                Bangumi.Init_Episodes_Information_By_Bangumi_Title(bangumi_title)
+                
             elif Type == RSS_Type.GATHER:
                 if DB.rss_gather_is_link_exist(link):
                     return True
@@ -98,8 +101,14 @@ class RSS:
         """                
     def Delete(Type, id):
         if Type == RSS_Type.SINGLE:
-            if DB.rss_single_delete_by_id(id):
+            try:
+                DB.bangumi_delete_by_rss_single_id(id)
+                DB.download_status_delete_by_rss_single_id(id)
+                DB.rss_single_delete_by_id(id)
                 return True
+            except Exception as e:
+                LOG_ERROR(e)
+                return False
         elif Type == RSS_Type.GATHER:
             if DB.rss_gather_delete_by_id(id):
                 return True
@@ -149,7 +158,7 @@ class RSS:
                         continue;
                     item = (link,title,season,bangumi_title)
                     DB.rss_single_insert(item)
-                    Bangumi.Init_Episodes_Information_By_Bangumi_Title(bangumi_title)
+                    #Bangumi.Init_Episodes_Information_By_Bangumi_Title(bangumi_title)
                     LOG_INFO(f'{RSS_INFO.FINDRSS.value} {bangumi_title}')
             single_links = DB.rss_single_get_all()
             for single_link in single_links:

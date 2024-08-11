@@ -5,7 +5,7 @@ from core.logs import *
 
 class DB:
 
-    data_dir = "/app/data"
+    data_dir = "data"
     # data_dir = 'data'
     file_name = conf.get_database_config().get("name")
     db_file = os.path.join(data_dir, file_name)
@@ -280,6 +280,7 @@ class DB:
     def rss_single_delete_by_id(id):
         conn = sqlite3.connect(DB.db_file)
         c = conn.cursor()
+        c.execute("PRAGMA foreign_keys = ON")
         c.execute("DELETE FROM rss_single WHERE id=?", (id,))
         conn.commit()
         conn.close()
@@ -362,6 +363,9 @@ class DB:
                 total_episodes = bangumi[0]
 
                 download_finished = item_count == total_episodes
+                
+                if total_episodes == 0:
+                    download_finished = False
 
             else:
                 total_episodes = None
@@ -375,3 +379,56 @@ class DB:
 
         conn.commit()
         conn.close()
+
+
+    @staticmethod
+    def get_bangumi_title_by_rss_single_id(id):
+        try:
+            conn = sqlite3.connect(DB.db_file)
+            c = conn.cursor()
+
+            c.execute(
+                    "SELECT bangumi_title FROM rss_single WHERE id = ?",
+                    (id,),
+                )
+            bangumi_title = c.fetchall()[0][0]
+            return bangumi_title
+        except Exception as e:
+            LOG_ERROR(e)
+        finally:
+            conn.close()
+    
+    @staticmethod
+    def bangumi_delete_by_rss_single_id(id):
+        bangumi_title = DB.get_bangumi_title_by_rss_single_id(id)
+        conn = sqlite3.connect(DB.db_file)
+        c = conn.cursor()
+        try:
+
+            c.execute(
+                "DELETE FROM bangumi WHERE subject_name = ?",
+                (bangumi_title,)
+            )
+            conn.commit()
+            print(f"Successfully deleted bangumi with title: {bangumi_title}")
+
+        except sqlite3.Error as e:
+            LOG_ERROR(e)
+        finally:
+            conn.close()
+            
+    @staticmethod
+    def download_status_delete_by_rss_single_id(id):
+        conn = sqlite3.connect(DB.db_file)
+        c = conn.cursor()
+        try:
+
+            c.execute(
+                "DELETE FROM download_status WHERE rss_single_id = ?",
+                (id,)
+            )
+            conn.commit()
+        except sqlite3.Error as e:
+            LOG_ERROR(e)
+        finally:
+            conn.close()

@@ -42,6 +42,7 @@ class Bangumi_Helper:
     @staticmethod
     def Get_SubjectID_By_Name(name):
         try:
+            name = name.replace(' ', '') 
             encoded_name = quote(name)
             link = Bangumi_Helper.baseurl + f'search/subject/{encoded_name}?type=2&responseGroup=small'
             response = requests.get(link, headers=Bangumi_Helper.headers,timeout=30)
@@ -64,6 +65,20 @@ class Bangumi_Helper:
                 json_data = response.json()
                 total = json_data['eps']
                 return total
+            else:
+                return None
+        except Exception as e:
+            return None
+        
+    @staticmethod
+    def Get_Subject_Image_Url_By_SubjectID(subject_id):
+        try:
+            url = f'{Bangumi_Helper.baseurl}v0/subjects/{subject_id}'
+            response = requests.get(url, headers=Bangumi_Helper.headers,timeout=30)
+            if response.status_code == 200:
+                json_data = response.json()
+                img_url = json_data['images']['large']
+                return img_url
             else:
                 return None
         except Exception as e:
@@ -129,11 +144,31 @@ class Bangumi_Helper:
         except requests.exceptions.RequestException as e:
             LOG_ERROR(f"Request failed: {e}")
 
+    @staticmethod
+    def download_image(url: str, subject_id: int, save_directory: str = "img"):
+        if not os.path.exists(save_directory):
+            os.makedirs(save_directory)
         
+        response = requests.get(url, stream=True)
+        
+        if response.status_code == 200:
+            content_type = response.headers.get('Content-Type', '')
+            file_extension = content_type.split('/')[1] if '/' in content_type else 'jpg'
+            
+            file_name = f"{subject_id}.{file_extension}"
+            file_path = os.path.join(save_directory, file_name)
+            
+            with open(file_path, 'wb') as file:
+                for chunk in response.iter_content(chunk_size=8192):
+                    file.write(chunk)
+            
+            print(f"Image saved as {file_name}")
+        else:
+            print("Failed to download image")
         
 
 class Bangumi:
-    
+
     @staticmethod
     def Init_Episodes_Information_By_Bangumi_Title(title):
         try:
@@ -142,8 +177,30 @@ class Bangumi:
             total_episodes = Bangumi_Helper.Get_Total_Episodes_By_SubjectID(subject_id)
             episodes_str = json.dumps(episodes)
             DB.bangumi_update({"subject_name": title, "subject_id": subject_id, "episodes": episodes_str,"total_episodes": total_episodes})
+            
+            ## 下载封面图片到本地
+            url = Bangumi_Helper.Get_Subject_Image_Url_By_SubjectID(subject_id)
+            Bangumi_Helper.download_image(url,title)
+            
         except Exception as e:
             LOG_ERROR("Init Episodes Information failed:",e)
+            
+    @staticmethod
+    def Refresh_Episodes_Information_By_Bangumi_Title(bangumi_title):
+        try:
+            subject_id = Bangumi_Helper.Get_SubjectID_By_Name(bangumi_title)
+            episodes = Bangumi_Helper.Get_Episodes_By_SubjectID(subject_id)
+            total_episodes = Bangumi_Helper.Get_Total_Episodes_By_SubjectID(subject_id)
+            LOG_INFO('Total Episodes:',total_episodes)
+            episodes_str = json.dumps(episodes)
+            LOG_INFO('Episode ID:',episodes)
+            DB.bangumi_update({"subject_name": bangumi_title, "subject_id": subject_id, "episodes": episodes_str,"total_episodes": total_episodes})
+            
+            url = Bangumi_Helper.Get_Subject_Image_Url_By_SubjectID(subject_id)
+            Bangumi_Helper.download_image(url,bangumi_title)
+        except Exception as e:
+            LOG_ERROR("Refresh Episodes Information failed:",e)   
+        
                    
     @staticmethod
     def Refresh_Episodes_Information():
@@ -164,6 +221,9 @@ class Bangumi:
                     episodes_str = json.dumps(episodes)
                     LOG_INFO('Episode ID:',episodes)
                     DB.bangumi_update({"subject_name": title, "subject_id": subject_id, "episodes": episodes_str,"total_episodes": total_episodes})
+                    
+                    url = Bangumi_Helper.Get_Subject_Image_Url_By_SubjectID(subject_id)
+                    Bangumi_Helper.download_image(url,title)
         except Exception as e:
             LOG_ERROR("Refresh Episodes Information failed:",e)   
                     

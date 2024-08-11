@@ -1,0 +1,712 @@
+2024-08-11 17:32:29,539 - DEBUG - Starting new HTTPS connection (1): mikanani.me:443
+2024-08-11 17:32:30,385 - DEBUG - https://mikanani.me:443 "GET /RSS/Bangumi?bangumiId=2980 HTTP/1.1" 200 None
+2024-08-11 21:44:08,358 - DEBUG - Starting new HTTPS connection (1): mikanani.me:443
+2024-08-11 21:44:08,891 - DEBUG - https://mikanani.me:443 "GET /RSS/Bangumi?bangumiId=2980 HTTP/1.1" 200 None
+2024-08-11 21:45:02,767 - DEBUG - Starting new HTTPS connection (1): mikanani.me:443
+2024-08-11 21:45:03,334 - DEBUG - https://mikanani.me:443 "GET /RSS/Bangumi?bangumiId=2980 HTTP/1.1" 200 None
+2024-08-11 21:45:44,709 - DEBUG - Starting new HTTPS connection (1): mikanani.me:443
+2024-08-11 21:45:45,271 - DEBUG - https://mikanani.me:443 "GET /RSS/Bangumi?bangumiId=2980 HTTP/1.1" 200 None
+2024-08-11 22:05:13,648 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 22:05:14,235 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/413786 HTTP/1.1" 200 None
+2024-08-11 22:15:28,708 - DEBUG - Starting new HTTPS connection (1): mikanani.me:443
+2024-08-11 22:15:29,283 - DEBUG - https://mikanani.me:443 "GET /RSS/Bangumi?bangumiId=2980 HTTP/1.1" 200 None
+2024-08-11 22:15:29,403 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 22:15:30,074 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E9%80%83%E8%B5%B0%E4%B8%AD%20GREAT%20MISSION?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 22:15:30,087 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 22:15:30,684 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=413786&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 22:15:30,740 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 22:15:32,109 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/413786 HTTP/1.1" 200 None
+2024-08-11 22:30:14,385 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 22:30:14,701 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/80/50/413786_W6T7k.jpg HTTP/1.1" 200 278058
+2024-08-11 22:32:38,193 - DEBUG - Starting new HTTPS connection (1): mikanani.me:443
+2024-08-11 22:32:38,731 - DEBUG - https://mikanani.me:443 "GET /RSS/Bangumi?bangumiId=2980&subgroupid=604 HTTP/1.1" 200 None
+2024-08-11 22:32:38,784 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 22:32:39,429 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E9%80%83%E8%B5%B0%E4%B8%AD%20GREAT%20MISSION?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 22:32:39,435 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 22:32:40,019 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=413786&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 22:32:40,091 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 22:32:40,663 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/413786 HTTP/1.1" 200 None
+2024-08-11 22:32:40,684 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 22:32:41,266 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/413786 HTTP/1.1" 200 None
+2024-08-11 22:32:41,269 - ERROR - Error Info: Init Episodes Information failed: type object 'Bangumi_Helper' has no attribute 'download_image'
+2024-08-11 22:32:41,269 - ERROR - Error Info: Init Episodes Information failed: type object 'Bangumi_Helper' has no attribute 'download_image'
+2024-08-11 22:35:29,369 - DEBUG - Starting new HTTPS connection (1): mikanani.me:443
+2024-08-11 22:35:29,956 - DEBUG - https://mikanani.me:443 "GET /RSS/Bangumi?bangumiId=2980&subgroupid=604 HTTP/1.1" 200 None
+2024-08-11 22:35:30,027 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 22:35:30,672 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E9%80%83%E8%B5%B0%E4%B8%AD%20GREAT%20MISSION?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 22:35:30,677 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 22:35:31,262 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=413786&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 22:35:31,569 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 22:35:32,171 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/413786 HTTP/1.1" 200 None
+2024-08-11 22:35:32,176 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 22:35:32,757 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/413786 HTTP/1.1" 200 None
+2024-08-11 22:35:32,762 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 22:35:33,097 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/80/50/413786_W6T7k.jpg HTTP/1.1" 200 278058
+2024-08-11 22:54:41,356 - DEBUG - Starting new HTTPS connection (1): mikanani.me:443
+2024-08-11 22:54:41,950 - DEBUG - https://mikanani.me:443 "GET /RSS/Bangumi?bangumiId=3274&subgroupid=614 HTTP/1.1" 200 None
+2024-08-11 22:54:41,977 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 22:54:43,521 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/Wonderful%20%E5%85%89%E4%B9%8B%E7%BE%8E%E5%B0%91%E5%A5%B3%EF%BC%81?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 22:54:43,536 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 22:54:44,124 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=467784&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 22:54:44,156 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 22:54:44,759 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/467784 HTTP/1.1" 200 None
+2024-08-11 22:54:44,766 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 22:54:45,352 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/467784 HTTP/1.1" 200 None
+2024-08-11 22:54:45,356 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 22:54:45,672 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/17/62/467784_4422O.jpg HTTP/1.1" 200 816625
+2024-08-11 23:06:56,686 - INFO - Background Info: Start Refresh Bangumi Data: 怪物转生
+2024-08-11 23:06:56,702 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:06:57,375 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E6%80%AA%E7%89%A9%E8%BD%AC%E7%94%9F?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:06:57,378 - INFO - Background Info: Bangumi ID: 455345
+2024-08-11 23:06:57,380 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:06:57,961 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=455345&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:06:57,968 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:06:58,617 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/455345 HTTP/1.1" 200 None
+2024-08-11 23:06:58,625 - INFO - Background Info: Total Episodes: 12
+2024-08-11 23:06:58,625 - INFO - Background Info: Episode ID: {1: 1307480, 2: 1307481, 3: 1307482, 4: 1307483, 5: 1307484, 6: 1307485, 7: 1307486, 8: 1307487, 9: 1307488, 10: 1307489, 11: 1307490, 12: 1307491}
+2024-08-11 23:06:58,628 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:06:59,239 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/455345 HTTP/1.1" 200 None
+2024-08-11 23:06:59,242 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:06:59,548 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/8e/3c/455345_nJwNn.jpg HTTP/1.1" 200 370831
+2024-08-11 23:07:02,765 - INFO - Background Info: Start Refresh Bangumi Data: 夜樱家的大作战
+2024-08-11 23:07:02,769 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:03,544 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E5%A4%9C%E6%A8%B1%E5%AE%B6%E7%9A%84%E5%A4%A7%E4%BD%9C%E6%88%98?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:07:03,547 - INFO - Background Info: Bangumi ID: 411276
+2024-08-11 23:07:03,548 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:04,212 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=411276&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:07:04,242 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:04,861 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/411276 HTTP/1.1" 200 None
+2024-08-11 23:07:04,865 - INFO - Background Info: Total Episodes: 27
+2024-08-11 23:07:04,865 - INFO - Background Info: Episode ID: {1: 1305825, 2: 1305826, 3: 1305827, 4: 1305828, 5: 1305829, 6: 1305830, 7: 1305831, 8: 1305832, 9: 1305833, 10: 1305834, 11: 1305835, 12: 1305836, 13: 1322949, 14: 1322950, 15: 1322951, 16: 1322952, 17: 1322953, 18: 1322954, 19: 1322955}
+2024-08-11 23:07:04,869 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:05,431 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/411276 HTTP/1.1" 200 None
+2024-08-11 23:07:05,434 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:07:05,741 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/9d/9a/411276_Kzyt0.jpg HTTP/1.1" 200 1953294
+2024-08-11 23:07:09,113 - INFO - Background Info: Start Refresh Bangumi Data: 单间、光照尚好、附带天使。
+2024-08-11 23:07:09,115 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:09,823 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E5%8D%95%E9%97%B4%E3%80%81%E5%85%89%E7%85%A7%E5%B0%9A%E5%A5%BD%E3%80%81%E9%99%84%E5%B8%A6%E5%A4%A9%E4%BD%BF%E3%80%82?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:07:09,827 - INFO - Background Info: Bangumi ID: 457945
+2024-08-11 23:07:09,828 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:10,448 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=457945&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:07:10,454 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:11,027 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/457945 HTTP/1.1" 200 None
+2024-08-11 23:07:11,031 - INFO - Background Info: Total Episodes: 12
+2024-08-11 23:07:11,032 - INFO - Background Info: Episode ID: {1: 1313759, 2: 1313760, 3: 1313761, 4: 1313762, 5: 1313763, 6: 1313764, 7: 1313765, 8: 1313766, 9: 1313767, 10: 1313768, 11: 1313769, 12: 1313770}
+2024-08-11 23:07:11,035 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:11,684 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/457945 HTTP/1.1" 200 None
+2024-08-11 23:07:11,687 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:07:11,993 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/c5/36/457945_0107Z.jpg HTTP/1.1" 200 720026
+2024-08-11 23:07:15,250 - INFO - Background Info: Start Refresh Bangumi Data: 关于我转生变成史莱姆这档事 第三季
+2024-08-11 23:07:15,253 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:15,947 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E5%85%B3%E4%BA%8E%E6%88%91%E8%BD%AC%E7%94%9F%E5%8F%98%E6%88%90%E5%8F%B2%E8%8E%B1%E5%A7%86%E8%BF%99%E6%A1%A3%E4%BA%8B%20%E7%AC%AC%E4%B8%89%E5%AD%A3?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:07:15,952 - INFO - Background Info: Bangumi ID: 407573
+2024-08-11 23:07:15,961 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:16,525 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=407573&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:07:16,530 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:17,105 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/407573 HTTP/1.1" 200 None
+2024-08-11 23:07:17,109 - INFO - Background Info: Total Episodes: 24
+2024-08-11 23:07:17,109 - INFO - Background Info: Episode ID: {49: 1145029, 50: 1145030, 51: 1145031, 52: 1145032, 53: 1145033, 54: 1145034, 55: 1145035, 56: 1145036, 57: 1145037, 58: 1145038, 59: 1145039, 60: 1145040, 61: 1281279, 62: 1281280, 63: 1281281, 64: 1281282, 65: 1281283, 48.5: 1322185, 65.5: 1379070}
+2024-08-11 23:07:17,114 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:17,724 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/407573 HTTP/1.1" 200 None
+2024-08-11 23:07:17,742 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:07:18,064 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/f0/f4/407573_993Vy.jpg HTTP/1.1" 200 101139
+2024-08-11 23:07:21,207 - INFO - Background Info: Start Refresh Bangumi Data: 摇曳露营△ 第三季
+2024-08-11 23:07:21,212 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:21,846 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E6%91%87%E6%9B%B3%E9%9C%B2%E8%90%A5%E2%96%B3%20%E7%AC%AC%E4%B8%89%E5%AD%A3?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:07:21,851 - INFO - Background Info: Bangumi ID: 405785
+2024-08-11 23:07:21,860 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:22,485 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=405785&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:07:22,493 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:23,062 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/405785 HTTP/1.1" 200 None
+2024-08-11 23:07:23,064 - INFO - Background Info: Total Episodes: 12
+2024-08-11 23:07:23,064 - INFO - Background Info: Episode ID: {1: 1362389, 2: 1366282, 3: 1304964, 4: 1304965, 5: 1304966, 6: 1304967, 7: 1304968, 8: 1304969, 9: 1304970, 10: 1304971, 11: 1304972, 12: 1304973}
+2024-08-11 23:07:23,067 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:23,659 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/405785 HTTP/1.1" 200 None
+2024-08-11 23:07:23,662 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:07:24,003 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/19/1a/405785_u9it9.jpg HTTP/1.1" 200 427024
+2024-08-11 23:07:27,241 - INFO - Background Info: Start Refresh Bangumi Data: GIRLS BAND CRY
+2024-08-11 23:07:27,244 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:27,845 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/GIRLS%20BAND%20CRY?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:07:27,847 - INFO - Background Info: Bangumi ID: 431767
+2024-08-11 23:07:27,849 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:28,396 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=431767&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:07:28,399 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:29,029 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/431767 HTTP/1.1" 200 None
+2024-08-11 23:07:29,032 - INFO - Background Info: Total Episodes: 13
+2024-08-11 23:07:29,035 - INFO - Background Info: Episode ID: {1: 1299356, 2: 1299357, 3: 1299358, 4: 1299359, 5: 1299360, 6: 1299361, 7: 1299362, 8: 1299363, 9: 1299364, 10: 1299365, 11: 1299366, 12: 1299367, 13: 1333032}
+2024-08-11 23:07:29,056 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:29,692 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/431767 HTTP/1.1" 200 None
+2024-08-11 23:07:29,697 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:07:30,007 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/75/c1/431767_bX7FZ.jpg HTTP/1.1" 200 1099918
+2024-08-11 23:07:33,320 - INFO - Background Info: Start Refresh Bangumi Data: 异世界自杀小队​​
+2024-08-11 23:07:33,325 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:33,983 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E5%BC%82%E4%B8%96%E7%95%8C%E8%87%AA%E6%9D%80%E5%B0%8F%E9%98%9F%E2%80%8B%E2%80%8B?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:07:33,988 - INFO - Background Info: Bangumi ID: 444046
+2024-08-11 23:07:33,990 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:34,620 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=444046&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:07:34,628 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:35,215 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/444046 HTTP/1.1" 200 None
+2024-08-11 23:07:35,227 - INFO - Background Info: Total Episodes: 10
+2024-08-11 23:07:35,227 - INFO - Background Info: Episode ID: {1: 1353094, 2: 1353095, 3: 1353096, 4: 1353097, 5: 1353098, 6: 1353099, 7: 1353100, 8: 1353101, 9: 1353102, 10: 1353103}
+2024-08-11 23:07:35,232 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:35,793 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/444046 HTTP/1.1" 200 None
+2024-08-11 23:07:35,798 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:07:36,098 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/00/ae/444046_9b5bM.jpg HTTP/1.1" 200 156065
+2024-08-11 23:07:39,259 - INFO - Background Info: Start Refresh Bangumi Data: 魔王军最强的魔术师是人类
+2024-08-11 23:07:39,262 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:39,933 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E9%AD%94%E7%8E%8B%E5%86%9B%E6%9C%80%E5%BC%BA%E7%9A%84%E9%AD%94%E6%9C%AF%E5%B8%88%E6%98%AF%E4%BA%BA%E7%B1%BB?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:07:39,936 - INFO - Background Info: Bangumi ID: 475933
+2024-08-11 23:07:39,944 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:40,543 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=475933&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:07:40,548 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:41,146 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/475933 HTTP/1.1" 200 None
+2024-08-11 23:07:41,151 - INFO - Background Info: Total Episodes: 12
+2024-08-11 23:07:41,151 - INFO - Background Info: Episode ID: {1: 1353862, 2: 1353863, 3: 1353864, 4: 1353865, 5: 1353866, 6: 1353867}
+2024-08-11 23:07:41,162 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:41,747 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/475933 HTTP/1.1" 200 None
+2024-08-11 23:07:41,750 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:07:42,071 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/0b/e5/475933_Kf14e.jpg HTTP/1.1" 200 626755
+2024-08-11 23:07:45,332 - INFO - Background Info: Start Refresh Bangumi Data: 【我推的孩子】 第二季
+2024-08-11 23:07:45,336 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:45,999 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E3%80%90%E6%88%91%E6%8E%A8%E7%9A%84%E5%AD%A9%E5%AD%90%E3%80%91%20%E7%AC%AC%E4%BA%8C%E5%AD%A3?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:07:46,005 - INFO - Background Info: Bangumi ID: 443428
+2024-08-11 23:07:46,008 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:46,593 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=443428&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:07:46,598 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:47,177 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/443428 HTTP/1.1" 200 None
+2024-08-11 23:07:47,179 - INFO - Background Info: Total Episodes: 13
+2024-08-11 23:07:47,179 - INFO - Background Info: Episode ID: {12: 1349007, 13: 1349008, 14: 1349009, 15: 1349010, 16: 1349011, 17: 1349012}
+2024-08-11 23:07:47,181 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:47,778 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/443428 HTTP/1.1" 200 None
+2024-08-11 23:07:47,783 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:07:48,094 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/d1/1c/443428_FIhFu.jpg HTTP/1.1" 200 384226
+2024-08-11 23:07:51,305 - INFO - Background Info: Start Refresh Bangumi Data: 不时用俄语小声说真心话的邻桌艾莉同学
+2024-08-11 23:07:51,312 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:52,045 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E4%B8%8D%E6%97%B6%E7%94%A8%E4%BF%84%E8%AF%AD%E5%B0%8F%E5%A3%B0%E8%AF%B4%E7%9C%9F%E5%BF%83%E8%AF%9D%E7%9A%84%E9%82%BB%E6%A1%8C%E8%89%BE%E8%8E%89%E5%90%8C%E5%AD%A6?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:07:52,048 - INFO - Background Info: Bangumi ID: 424883
+2024-08-11 23:07:52,051 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:52,634 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=424883&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:07:52,647 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:53,245 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/424883 HTTP/1.1" 200 None
+2024-08-11 23:07:53,248 - INFO - Background Info: Total Episodes: 12
+2024-08-11 23:07:53,248 - INFO - Background Info: Episode ID: {1: 1350861, 2: 1350862, 3: 1350863, 4: 1350864, 5: 1350865, 6: 1350866}
+2024-08-11 23:07:53,272 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:53,851 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/424883 HTTP/1.1" 200 None
+2024-08-11 23:07:53,857 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:07:54,168 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/7c/8e/424883_BpzVb.jpg HTTP/1.1" 200 834708
+2024-08-11 23:07:57,429 - INFO - Background Info: Start Refresh Bangumi Data: 大叔新人冒险者被最强小队拼死锻炼后无敌了。
+2024-08-11 23:07:57,431 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:58,171 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E5%A4%A7%E5%8F%94%E6%96%B0%E4%BA%BA%E5%86%92%E9%99%A9%E8%80%85%E8%A2%AB%E6%9C%80%E5%BC%BA%E5%B0%8F%E9%98%9F%E6%8B%BC%E6%AD%BB%E9%94%BB%E7%82%BC%E5%90%8E%E6%97%A0%E6%95%8C%E4%BA%86%E3%80%82?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:07:58,178 - INFO - Background Info: Bangumi ID: 427059
+2024-08-11 23:07:58,180 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:58,744 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=427059&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:07:58,749 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:59,343 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/427059 HTTP/1.1" 200 None
+2024-08-11 23:07:59,346 - INFO - Background Info: Total Episodes: 12
+2024-08-11 23:07:59,346 - INFO - Background Info: Episode ID: {1: 1348317, 2: 1348318, 3: 1348319, 4: 1348320, 5: 1348321, 6: 1348322}
+2024-08-11 23:07:59,352 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:07:59,954 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/427059 HTTP/1.1" 200 None
+2024-08-11 23:07:59,964 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:08:00,261 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/6a/45/427059_yWedw.jpg HTTP/1.1" 200 490993
+2024-08-11 23:08:03,513 - INFO - Background Info: Start Refresh Bangumi Data: 腼腆英雄 东京夺还篇
+2024-08-11 23:08:03,515 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:04,132 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E8%85%BC%E8%85%86%E8%8B%B1%E9%9B%84%20%E4%B8%9C%E4%BA%AC%E5%A4%BA%E8%BF%98%E7%AF%87?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:08:04,138 - INFO - Background Info: Bangumi ID: 470874
+2024-08-11 23:08:04,145 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:04,787 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=470874&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:08:04,793 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:05,410 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/470874 HTTP/1.1" 200 None
+2024-08-11 23:08:05,413 - INFO - Background Info: Total Episodes: 12
+2024-08-11 23:08:05,413 - INFO - Background Info: Episode ID: {13: 1355701, 14: 1355702, 15: 1355703, 16: 1355704, 17: 1355705, 18: 1355706}
+2024-08-11 23:08:05,418 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:06,036 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/470874 HTTP/1.1" 200 None
+2024-08-11 23:08:06,048 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:08:06,364 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/cd/89/470874_zSyEG.jpg HTTP/1.1" 200 230882
+2024-08-11 23:08:09,565 - INFO - Background Info: Start Refresh Bangumi Data: 我的妻子没有感情
+2024-08-11 23:08:09,566 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:10,257 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E6%88%91%E7%9A%84%E5%A6%BB%E5%AD%90%E6%B2%A1%E6%9C%89%E6%84%9F%E6%83%85?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:08:10,267 - INFO - Background Info: Bangumi ID: 482776
+2024-08-11 23:08:10,270 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:10,841 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=482776&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:08:10,843 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:11,425 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/482776 HTTP/1.1" 200 None
+2024-08-11 23:08:11,426 - INFO - Background Info: Total Episodes: 12
+2024-08-11 23:08:11,426 - INFO - Background Info: Episode ID: {1: 1340012, 2: 1340013, 3: 1340014, 4: 1340015, 5: 1340016, 6: 1340017, 7: 1340018}
+2024-08-11 23:08:11,429 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:12,008 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/482776 HTTP/1.1" 200 None
+2024-08-11 23:08:12,010 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:08:12,322 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/ce/50/482776_G98Y9.jpg HTTP/1.1" 200 300829
+2024-08-11 23:08:15,516 - INFO - Background Info: Start Refresh Bangumi Data: 这个世界漏洞百出
+2024-08-11 23:08:15,522 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:16,195 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E8%BF%99%E4%B8%AA%E4%B8%96%E7%95%8C%E6%BC%8F%E6%B4%9E%E7%99%BE%E5%87%BA?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:08:16,197 - INFO - Background Info: Bangumi ID: 425890
+2024-08-11 23:08:16,198 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:16,800 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=425890&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:08:16,802 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:17,366 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/425890 HTTP/1.1" 200 None
+2024-08-11 23:08:17,370 - INFO - Background Info: Total Episodes: 13
+2024-08-11 23:08:17,370 - INFO - Background Info: Episode ID: {1: 1340592, 2: 1340593, 3: 1340594, 4: 1340595, 5: 1340596, 6: 1340597}
+2024-08-11 23:08:17,375 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:17,962 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/425890 HTTP/1.1" 200 None
+2024-08-11 23:08:17,966 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:08:18,269 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/97/5c/425890_4dXnI.jpg HTTP/1.1" 200 1229384
+2024-08-11 23:08:21,582 - INFO - Background Info: Start Refresh Bangumi Data: 地下城里的人们
+2024-08-11 23:08:21,584 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:22,236 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E5%9C%B0%E4%B8%8B%E5%9F%8E%E9%87%8C%E7%9A%84%E4%BA%BA%E4%BB%AC?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:08:22,240 - INFO - Background Info: Bangumi ID: 450586
+2024-08-11 23:08:22,241 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:22,835 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=450586&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:08:22,840 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:23,435 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/450586 HTTP/1.1" 200 None
+2024-08-11 23:08:23,436 - INFO - Background Info: Total Episodes: 12
+2024-08-11 23:08:23,436 - INFO - Background Info: Episode ID: {1: 1348329, 2: 1348330, 3: 1348331, 4: 1348332, 5: 1348333}
+2024-08-11 23:08:23,439 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:24,040 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/450586 HTTP/1.1" 200 None
+2024-08-11 23:08:24,047 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:08:24,377 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/32/fd/450586_FdLdq.jpg HTTP/1.1" 200 541870
+2024-08-11 23:08:27,636 - INFO - Background Info: Start Refresh Bangumi Data: 2.5次元的诱惑
+2024-08-11 23:08:27,641 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:28,279 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/2.5%E6%AC%A1%E5%85%83%E7%9A%84%E8%AF%B1%E6%83%91?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:08:28,280 - INFO - Background Info: Bangumi ID: 410346
+2024-08-11 23:08:28,281 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:28,882 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=410346&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:08:28,884 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:29,424 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/410346 HTTP/1.1" 200 None
+2024-08-11 23:08:29,425 - INFO - Background Info: Total Episodes: 24
+2024-08-11 23:08:29,425 - INFO - Background Info: Episode ID: {1: 1336023, 2: 1336024, 3: 1336025, 4: 1336026, 5: 1336027, 6: 1336028}
+2024-08-11 23:08:29,429 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:30,036 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/410346 HTTP/1.1" 200 None
+2024-08-11 23:08:30,041 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:08:30,354 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/53/13/410346_z8j5n.jpg HTTP/1.1" 200 740580
+2024-08-11 23:08:33,634 - INFO - Background Info: Start Refresh Bangumi Data: 前辈是男孩子
+2024-08-11 23:08:33,640 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:34,293 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E5%89%8D%E8%BE%88%E6%98%AF%E7%94%B7%E5%AD%A9%E5%AD%90?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:08:34,295 - INFO - Background Info: Bangumi ID: 425988
+2024-08-11 23:08:34,297 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:34,903 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=425988&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:08:34,906 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:35,482 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/425988 HTTP/1.1" 200 None
+2024-08-11 23:08:35,484 - INFO - Background Info: Total Episodes: 12
+2024-08-11 23:08:35,484 - INFO - Background Info: Episode ID: {1: 1340880, 2: 1340881, 3: 1340882, 4: 1340883, 5: 1340884}
+2024-08-11 23:08:35,487 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:36,072 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/425988 HTTP/1.1" 200 None
+2024-08-11 23:08:36,085 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:08:36,382 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/53/76/425988_RH9UK.jpg HTTP/1.1" 200 460407
+2024-08-11 23:08:39,629 - INFO - Background Info: Start Refresh Bangumi Data: 拉面赤猫
+2024-08-11 23:08:39,630 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:40,231 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E6%8B%89%E9%9D%A2%E8%B5%A4%E7%8C%AB?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:08:40,235 - INFO - Background Info: Bangumi ID: 467243
+2024-08-11 23:08:40,237 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:40,809 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=467243&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:08:40,811 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:41,413 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/467243 HTTP/1.1" 200 None
+2024-08-11 23:08:41,415 - INFO - Background Info: Total Episodes: 12
+2024-08-11 23:08:41,415 - INFO - Background Info: Episode ID: {1: 1324339, 2: 1324340, 3: 1324341, 4: 1324342, 5: 1324343, 6: 1324344}
+2024-08-11 23:08:41,418 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:42,032 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/467243 HTTP/1.1" 200 None
+2024-08-11 23:08:42,034 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:08:42,331 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/60/b2/467243_hB6fN.jpg HTTP/1.1" 200 423522
+2024-08-11 23:08:45,563 - INFO - Background Info: Start Refresh Bangumi Data: 依靠被嫌弃的【状态异常技能】而成为最强的我最终蹂躏一切
+2024-08-11 23:08:45,566 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:46,271 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E4%BE%9D%E9%9D%A0%E8%A2%AB%E5%AB%8C%E5%BC%83%E7%9A%84%E3%80%90%E7%8A%B6%E6%80%81%E5%BC%82%E5%B8%B8%E6%8A%80%E8%83%BD%E3%80%91%E8%80%8C%E6%88%90%E4%B8%BA%E6%9C%80%E5%BC%BA%E7%9A%84%E6%88%91%E6%9C%80%E7%BB%88%E8%B9%82%E8%BA%8F%E4%B8%80%E5%88%87?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:08:46,276 - INFO - Background Info: Bangumi ID: 476418
+2024-08-11 23:08:46,278 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:46,849 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=476418&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:08:46,851 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:47,404 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/476418 HTTP/1.1" 200 None
+2024-08-11 23:08:47,406 - INFO - Background Info: Total Episodes: 12
+2024-08-11 23:08:47,406 - INFO - Background Info: Episode ID: {1: 1347075, 2: 1347076, 3: 1347077, 4: 1347078, 5: 1347079, 6: 1347080}
+2024-08-11 23:08:47,409 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:48,005 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/476418 HTTP/1.1" 200 None
+2024-08-11 23:08:48,008 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:08:48,314 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/ac/c5/476418_50C5z.jpg HTTP/1.1" 200 709461
+2024-08-11 23:08:51,577 - INFO - Background Info: Start Refresh Bangumi Data: 疑似后宫
+2024-08-11 23:08:51,579 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:52,177 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E7%96%91%E4%BC%BC%E5%90%8E%E5%AE%AB?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:08:52,181 - INFO - Background Info: Bangumi ID: 428823
+2024-08-11 23:08:52,182 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:52,748 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=428823&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:08:52,753 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:53,331 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/428823 HTTP/1.1" 200 None
+2024-08-11 23:08:53,333 - INFO - Background Info: Total Episodes: 12
+2024-08-11 23:08:53,333 - INFO - Background Info: Episode ID: {1: 1355603, 2: 1355604, 3: 1355605, 4: 1355606, 5: 1355607, 6: 1355608}
+2024-08-11 23:08:53,336 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:53,925 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/428823 HTTP/1.1" 200 None
+2024-08-11 23:08:53,932 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:08:54,241 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/0c/fd/428823_vuwNR.jpg HTTP/1.1" 200 438331
+2024-08-11 23:08:57,481 - INFO - Background Info: Start Refresh Bangumi Data: 我要【招架】一切〜反误解的世界最强想成为冒险者〜
+2024-08-11 23:08:57,483 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:58,214 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E6%88%91%E8%A6%81%E3%80%90%E6%8B%9B%E6%9E%B6%E3%80%91%E4%B8%80%E5%88%87%E3%80%9C%E5%8F%8D%E8%AF%AF%E8%A7%A3%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%80%E5%BC%BA%E6%83%B3%E6%88%90%E4%B8%BA%E5%86%92%E9%99%A9%E8%80%85%E3%80%9C?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:08:58,217 - INFO - Background Info: Bangumi ID: 463389
+2024-08-11 23:08:58,219 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:58,788 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=463389&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:08:58,790 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:59,408 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/463389 HTTP/1.1" 200 None
+2024-08-11 23:08:59,411 - INFO - Background Info: Total Episodes: 12
+2024-08-11 23:08:59,411 - INFO - Background Info: Episode ID: {1: 1345494, 2: 1345495, 3: 1345496, 4: 1345497, 5: 1345498, 6: 1345499}
+2024-08-11 23:08:59,414 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:08:59,989 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/463389 HTTP/1.1" 200 None
+2024-08-11 23:08:59,992 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:09:00,306 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/c7/57/463389_PGZ0p.jpg HTTP/1.1" 200 514866
+2024-08-11 23:09:03,557 - INFO - Background Info: Start Refresh Bangumi Data: 黄昏光影
+2024-08-11 23:09:03,560 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:04,182 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E9%BB%84%E6%98%8F%E5%85%89%E5%BD%B1?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:09:04,184 - INFO - Background Info: Bangumi ID: 443931
+2024-08-11 23:09:04,186 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:04,809 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=443931&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:09:04,814 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:05,470 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/443931 HTTP/1.1" 200 None
+2024-08-11 23:09:05,471 - INFO - Background Info: Total Episodes: 12
+2024-08-11 23:09:05,471 - INFO - Background Info: Episode ID: {1: 1350200, 2: 1350201, 3: 1350202, 4: 1350203, 5: 1350204, 6: 1350205}
+2024-08-11 23:09:05,475 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:06,076 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/443931 HTTP/1.1" 200 None
+2024-08-11 23:09:06,087 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:09:06,405 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/75/82/443931_E6OC7.jpg HTTP/1.1" 200 449333
+2024-08-11 23:09:09,639 - INFO - Background Info: Start Refresh Bangumi Data: 尼尔：自动人形 Ver1.1a 第2部分
+2024-08-11 23:09:09,641 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:10,272 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E5%B0%BC%E5%B0%94%EF%BC%9A%E8%87%AA%E5%8A%A8%E4%BA%BA%E5%BD%A2%20Ver1.1a%20%E7%AC%AC2%E9%83%A8%E5%88%86?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:09:10,281 - INFO - Background Info: Bangumi ID: 446618
+2024-08-11 23:09:10,284 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:10,919 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=446618&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:09:10,925 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:11,485 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/446618 HTTP/1.1" 200 None
+2024-08-11 23:09:11,495 - INFO - Background Info: Total Episodes: 12
+2024-08-11 23:09:11,496 - INFO - Background Info: Episode ID: {13: 1355503, 14: 1355504, 15: 1355505, 16: 1355506, 17: 1355507, 18: 1355508}
+2024-08-11 23:09:11,500 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:12,096 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/446618 HTTP/1.1" 200 None
+2024-08-11 23:09:12,101 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:09:12,401 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/62/d8/446618_42Up5.jpg HTTP/1.1" 200 404449
+2024-08-11 23:09:15,633 - INFO - Background Info: Start Refresh Bangumi Data: 从路人角色开始的探索英雄谭
+2024-08-11 23:09:15,635 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:17,120 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E4%BB%8E%E8%B7%AF%E4%BA%BA%E8%A7%92%E8%89%B2%E5%BC%80%E5%A7%8B%E7%9A%84%E6%8E%A2%E7%B4%A2%E8%8B%B1%E9%9B%84%E8%B0%AD?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:09:17,121 - INFO - Background Info: Bangumi ID: 472554
+2024-08-11 23:09:17,122 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:17,684 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=472554&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:09:17,687 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:18,283 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/472554 HTTP/1.1" 200 None
+2024-08-11 23:09:18,289 - INFO - Background Info: Total Episodes: 11
+2024-08-11 23:09:18,289 - INFO - Background Info: Episode ID: {1: 1341074, 2: 1341075, 3: 1341076, 4: 1341077, 5: 1341078, 6: 1341079}
+2024-08-11 23:09:18,300 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:18,908 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/472554 HTTP/1.1" 200 None
+2024-08-11 23:09:18,913 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:09:19,208 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/65/1c/472554_eh55w.jpg HTTP/1.1" 200 667728
+2024-08-11 23:09:22,476 - INFO - Background Info: Start Refresh Bangumi Data: 杖与剑的魔剑谭
+2024-08-11 23:09:22,484 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:23,090 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E6%9D%96%E4%B8%8E%E5%89%91%E7%9A%84%E9%AD%94%E5%89%91%E8%B0%AD?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:09:23,095 - INFO - Background Info: Bangumi ID: 479477
+2024-08-11 23:09:23,097 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:23,665 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=479477&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:09:23,667 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:24,255 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/479477 HTTP/1.1" 200 None
+2024-08-11 23:09:24,256 - INFO - Background Info: Total Episodes: 12
+2024-08-11 23:09:24,256 - INFO - Background Info: Episode ID: {1: 1353898, 2: 1353899, 3: 1353900, 4: 1353901, 5: 1353902}
+2024-08-11 23:09:24,259 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:24,853 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/479477 HTTP/1.1" 200 None
+2024-08-11 23:09:24,858 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:09:25,151 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/6d/e5/479477_19844.jpg HTTP/1.1" 200 445114
+2024-08-11 23:09:28,383 - INFO - Background Info: Start Refresh Bangumi Data: 小市民系列
+2024-08-11 23:09:28,384 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:29,007 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E5%B0%8F%E5%B8%82%E6%B0%91%E7%B3%BB%E5%88%97?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:09:29,011 - INFO - Background Info: Bangumi ID: 474906
+2024-08-11 23:09:29,014 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:30,396 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=474906&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:09:30,402 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:30,991 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/474906 HTTP/1.1" 200 None
+2024-08-11 23:09:30,992 - INFO - Background Info: Total Episodes: 10
+2024-08-11 23:09:30,992 - INFO - Background Info: Episode ID: {1: 1354080, 2: 1354081, 3: 1354082, 4: 1354083, 5: 1354084}
+2024-08-11 23:09:30,994 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:31,576 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/474906 HTTP/1.1" 200 None
+2024-08-11 23:09:31,585 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:09:31,898 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/e2/f4/474906_qcssq.jpg HTTP/1.1" 200 407312
+2024-08-11 23:09:35,117 - INFO - Background Info: Start Refresh Bangumi Data: 天穗之咲稻姬
+2024-08-11 23:09:35,120 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:35,723 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E5%A4%A9%E7%A9%97%E4%B9%8B%E5%92%B2%E7%A8%BB%E5%A7%AC?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:09:35,726 - INFO - Background Info: Bangumi ID: 478684
+2024-08-11 23:09:35,732 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:36,293 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=478684&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:09:36,300 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:36,877 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/478684 HTTP/1.1" 200 None
+2024-08-11 23:09:36,884 - INFO - Background Info: Total Episodes: 13
+2024-08-11 23:09:36,884 - INFO - Background Info: Episode ID: {1: 1348500, 2: 1348501, 3: 1348502, 4: 1348503, 5: 1348504, 6: 1348505}
+2024-08-11 23:09:36,887 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:37,488 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/478684 HTTP/1.1" 200 None
+2024-08-11 23:09:37,494 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:09:37,818 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/e9/f4/478684_gVp0X.jpg HTTP/1.1" 200 322485
+2024-08-11 23:09:41,040 - INFO - Background Info: Start Refresh Bangumi Data: 精灵小姐瘦不了。
+2024-08-11 23:09:41,041 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:41,705 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E7%B2%BE%E7%81%B5%E5%B0%8F%E5%A7%90%E7%98%A6%E4%B8%8D%E4%BA%86%E3%80%82?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:09:41,706 - INFO - Background Info: Bangumi ID: 475367
+2024-08-11 23:09:41,707 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:42,274 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=475367&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:09:42,288 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:42,857 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/475367 HTTP/1.1" 200 None
+2024-08-11 23:09:42,865 - INFO - Background Info: Total Episodes: 14
+2024-08-11 23:09:42,865 - INFO - Background Info: Episode ID: {1: 1353874, 2: 1353875, 3: 1353876, 4: 1353877, 5: 1353878, 6: 1353879}
+2024-08-11 23:09:42,877 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:43,495 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/475367 HTTP/1.1" 200 None
+2024-08-11 23:09:43,497 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:09:43,845 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/e8/b0/475367_8q8o8.jpg HTTP/1.1" 200 1121354
+2024-08-11 23:09:47,173 - INFO - Background Info: Start Refresh Bangumi Data: 异世界悠闲纪行 ～边养娃边当冒险者～
+2024-08-11 23:09:47,174 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:47,868 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E5%BC%82%E4%B8%96%E7%95%8C%E6%82%A0%E9%97%B2%E7%BA%AA%E8%A1%8C%20%EF%BD%9E%E8%BE%B9%E5%85%BB%E5%A8%83%E8%BE%B9%E5%BD%93%E5%86%92%E9%99%A9%E8%80%85%EF%BD%9E?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:09:47,875 - INFO - Background Info: Bangumi ID: 467811
+2024-08-11 23:09:47,886 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:48,476 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=467811&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:09:48,480 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:49,077 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/467811 HTTP/1.1" 200 None
+2024-08-11 23:09:49,079 - INFO - Background Info: Total Episodes: 12
+2024-08-11 23:09:49,079 - INFO - Background Info: Episode ID: {1: 1351395, 2: 1351396, 3: 1351397}
+2024-08-11 23:09:49,081 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:49,647 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/467811 HTTP/1.1" 200 None
+2024-08-11 23:09:49,655 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:09:49,959 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/6c/36/467811_WRG0r.jpg HTTP/1.1" 200 364803
+2024-08-11 23:09:53,192 - INFO - Background Info: Start Refresh Bangumi Data: 鹿乃子乃子乃子虎视眈眈
+2024-08-11 23:09:53,203 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:53,940 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E9%B9%BF%E4%B9%83%E5%AD%90%E4%B9%83%E5%AD%90%E4%B9%83%E5%AD%90%E8%99%8E%E8%A7%86%E7%9C%88%E7%9C%88?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:09:53,949 - INFO - Background Info: Bangumi ID: 484761
+2024-08-11 23:09:53,956 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:54,583 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=484761&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:09:54,586 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:55,171 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/484761 HTTP/1.1" 200 None
+2024-08-11 23:09:55,174 - INFO - Background Info: Total Episodes: 12
+2024-08-11 23:09:55,174 - INFO - Background Info: Episode ID: {1: 1324327, 2: 1324328, 3: 1324329, 4: 1324330, 5: 1324331, 6: 1324332}
+2024-08-11 23:09:55,185 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:55,771 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/484761 HTTP/1.1" 200 None
+2024-08-11 23:09:55,783 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:09:56,103 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/b1/7b/484761_fLYU6.jpg HTTP/1.1" 200 604917
+2024-08-11 23:09:59,370 - INFO - Background Info: Start Refresh Bangumi Data: 深夜重拳
+2024-08-11 23:09:59,373 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:09:59,976 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E6%B7%B1%E5%A4%9C%E9%87%8D%E6%8B%B3?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:09:59,983 - INFO - Background Info: Bangumi ID: 503976
+2024-08-11 23:09:59,988 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:00,564 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=503976&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:10:00,566 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:01,116 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/503976 HTTP/1.1" 200 None
+2024-08-11 23:10:01,117 - INFO - Background Info: Total Episodes: 0
+2024-08-11 23:10:01,117 - INFO - Background Info: Episode ID: {1: 1369445, 2: 1369446}
+2024-08-11 23:10:01,121 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:01,698 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/503976 HTTP/1.1" 200 None
+2024-08-11 23:10:01,721 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:10:02,063 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/47/5c/503976_w4uUW.jpg HTTP/1.1" 200 166792
+2024-08-11 23:10:05,241 - INFO - Background Info: Start Refresh Bangumi Data: 身为VTuber的我因为忘记关台而成了传说
+2024-08-11 23:10:05,252 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:05,951 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E8%BA%AB%E4%B8%BAVTuber%E7%9A%84%E6%88%91%E5%9B%A0%E4%B8%BA%E5%BF%98%E8%AE%B0%E5%85%B3%E5%8F%B0%E8%80%8C%E6%88%90%E4%BA%86%E4%BC%A0%E8%AF%B4?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:10:05,952 - INFO - Background Info: Bangumi ID: 416320
+2024-08-11 23:10:05,953 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:06,591 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=416320&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:10:06,599 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:07,198 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/416320 HTTP/1.1" 200 None
+2024-08-11 23:10:07,202 - INFO - Background Info: Total Episodes: 12
+2024-08-11 23:10:07,202 - INFO - Background Info: Episode ID: {1: 1354152, 2: 1354153, 3: 1354154, 4: 1354155, 5: 1354156, 6: 1354157, 7: 1354158, 8: 1354159, 9: 1354160, 10: 1354161, 11: 1354162, 12: 1354163}
+2024-08-11 23:10:07,206 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:07,809 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/416320 HTTP/1.1" 200 None
+2024-08-11 23:10:07,816 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:10:08,136 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/fb/28/416320_Iprrq.jpg HTTP/1.1" 200 672548
+2024-08-11 23:10:11,390 - INFO - Background Info: Start Refresh Bangumi Data: 物语系列 外传季&怪物季
+2024-08-11 23:10:11,392 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:12,062 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E7%89%A9%E8%AF%AD%E7%B3%BB%E5%88%97%20%E5%A4%96%E4%BC%A0%E5%AD%A3%26%E6%80%AA%E7%89%A9%E5%AD%A3?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:10:12,064 - INFO - Background Info: Bangumi ID: 475354
+2024-08-11 23:10:12,066 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:12,664 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=475354&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:10:12,668 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:13,232 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/475354 HTTP/1.1" 200 None
+2024-08-11 23:10:13,239 - INFO - Background Info: Total Episodes: 0
+2024-08-11 23:10:13,240 - INFO - Background Info: Episode ID: {1: 1319027, 2: 1363315, 3: 1363316, 4: 1363317, 5: 1364717, 6: 1364718}
+2024-08-11 23:10:13,251 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:13,813 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/475354 HTTP/1.1" 200 None
+2024-08-11 23:10:13,818 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:10:14,166 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/85/c1/475354_QyO6r.jpg HTTP/1.1" 200 171029
+2024-08-11 23:10:17,347 - INFO - Background Info: Start Refresh Bangumi Data: 哎咕岛消失的舔甜歌姬
+2024-08-11 23:10:17,349 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:17,976 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E5%93%8E%E5%92%95%E5%B2%9B%E6%B6%88%E5%A4%B1%E7%9A%84%E8%88%94%E7%94%9C%E6%AD%8C%E5%A7%AC?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:10:17,980 - INFO - Background Info: Bangumi ID: 490824
+2024-08-11 23:10:17,982 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:18,568 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=490824&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:10:18,573 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:19,168 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/490824 HTTP/1.1" 200 None
+2024-08-11 23:10:19,172 - INFO - Background Info: Total Episodes: 0
+2024-08-11 23:10:19,172 - INFO - Background Info: Episode ID: {1: 1365660, 2: 1365661, 3: 1365662, 4: 1365663, 5: 1365664}
+2024-08-11 23:10:19,176 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:19,773 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/490824 HTTP/1.1" 200 None
+2024-08-11 23:10:19,778 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:10:20,064 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/9f/21/490824_8oJpo.jpg HTTP/1.1" 200 159594
+2024-08-11 23:10:23,215 - INFO - Background Info: Start Refresh Bangumi Data: 魔法少女与恶曾是敌人。
+2024-08-11 23:10:23,220 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:23,928 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E9%AD%94%E6%B3%95%E5%B0%91%E5%A5%B3%E4%B8%8E%E6%81%B6%E6%9B%BE%E6%98%AF%E6%95%8C%E4%BA%BA%E3%80%82?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:10:23,934 - INFO - Background Info: Bangumi ID: 465884
+2024-08-11 23:10:23,936 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:24,578 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=465884&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:10:24,584 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:25,176 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/465884 HTTP/1.1" 200 None
+2024-08-11 23:10:25,179 - INFO - Background Info: Total Episodes: 12
+2024-08-11 23:10:25,180 - INFO - Background Info: Episode ID: {1: 1344945, 2: 1344946, 3: 1344947, 4: 1344948, 5: 1344949, 6: 1344950}
+2024-08-11 23:10:25,183 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:25,752 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/465884 HTTP/1.1" 200 None
+2024-08-11 23:10:25,755 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:10:26,091 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/c9/4f/465884_fqZbB.jpg HTTP/1.1" 200 550294
+2024-08-11 23:10:29,331 - INFO - Background Info: Start Refresh Bangumi Data: 你与我最后的战场，亦或是世界起始的圣战 第二季
+2024-08-11 23:10:29,334 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:30,082 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E4%BD%A0%E4%B8%8E%E6%88%91%E6%9C%80%E5%90%8E%E7%9A%84%E6%88%98%E5%9C%BA%EF%BC%8C%E4%BA%A6%E6%88%96%E6%98%AF%E4%B8%96%E7%95%8C%E8%B5%B7%E5%A7%8B%E7%9A%84%E5%9C%A3%E6%88%98%20%E7%AC%AC%E4%BA%8C%E5%AD%A3?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:10:30,086 - INFO - Background Info: Bangumi ID: 351349
+2024-08-11 23:10:30,087 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:30,698 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=351349&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:10:30,702 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:31,318 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/351349 HTTP/1.1" 200 None
+2024-08-11 23:10:31,320 - INFO - Background Info: Total Episodes: 12
+2024-08-11 23:10:31,321 - INFO - Background Info: Episode ID: {1: 1354056, 2: 1354057, 3: 1354058, 4: 1354059}
+2024-08-11 23:10:31,326 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:31,933 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/351349 HTTP/1.1" 200 None
+2024-08-11 23:10:31,939 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:10:32,242 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/e5/fc/351349_Z8mpG.jpg HTTP/1.1" 200 486355
+2024-08-11 23:10:35,476 - INFO - Background Info: Start Refresh Bangumi Data: 筋肉人 完美超人始祖篇
+2024-08-11 23:10:35,485 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:36,186 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E7%AD%8B%E8%82%89%E4%BA%BA%20%E5%AE%8C%E7%BE%8E%E8%B6%85%E4%BA%BA%E5%A7%8B%E7%A5%96%E7%AF%87?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:10:36,192 - INFO - Background Info: Bangumi ID: 424853
+2024-08-11 23:10:36,197 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:36,773 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=424853&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:10:36,784 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:37,345 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/424853 HTTP/1.1" 200 None
+2024-08-11 23:10:37,350 - INFO - Background Info: Total Episodes: 12
+2024-08-11 23:10:37,350 - INFO - Background Info: Episode ID: {0: 1346646, 1: 1346647, 2: 1346648, 3: 1346649, 4: 1346650, 5: 1346651}
+2024-08-11 23:10:37,360 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:37,916 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/424853 HTTP/1.1" 200 None
+2024-08-11 23:10:37,924 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:10:38,233 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/1b/83/424853_J6II2.jpg HTTP/1.1" 200 359662
+2024-08-11 23:10:41,450 - INFO - Background Info: Start Refresh Bangumi Data: 亚托莉 -我挚爱的时光-
+2024-08-11 23:10:41,455 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:42,054 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E4%BA%9A%E6%89%98%E8%8E%89%20-%E6%88%91%E6%8C%9A%E7%88%B1%E7%9A%84%E6%97%B6%E5%85%89-?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:10:42,055 - INFO - Background Info: Bangumi ID: 
+2024-08-11 23:10:45,060 - INFO - Background Info: Start Refresh Bangumi Data: 现代误译
+2024-08-11 23:10:45,068 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:45,654 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E7%8E%B0%E4%BB%A3%E8%AF%AF%E8%AF%91?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:10:45,656 - INFO - Background Info: Bangumi ID: 485122
+2024-08-11 23:10:45,658 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:46,255 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=485122&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:10:46,258 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:46,835 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/485122 HTTP/1.1" 200 None
+2024-08-11 23:10:46,837 - INFO - Background Info: Total Episodes: 12
+2024-08-11 23:10:46,837 - INFO - Background Info: Episode ID: {1: 1368523, 2: 1368524, 3: 1370201, 4: 1373254, 5: 1377079, 6: 1379897}
+2024-08-11 23:10:46,841 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:47,449 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/485122 HTTP/1.1" 200 None
+2024-08-11 23:10:47,452 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:10:47,769 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/8c/e4/485122_37pLb.jpg HTTP/1.1" 200 92162
+2024-08-11 23:10:50,900 - INFO - Background Info: Start Refresh Bangumi Data: 我的英雄学院 第七季
+2024-08-11 23:10:50,901 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:51,552 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E6%88%91%E7%9A%84%E8%8B%B1%E9%9B%84%E5%AD%A6%E9%99%A2%20%E7%AC%AC%E4%B8%83%E5%AD%A3?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:10:51,553 - INFO - Background Info: Bangumi ID: 425587
+2024-08-11 23:10:51,554 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:52,140 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=425587&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:10:52,145 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:52,706 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/425587 HTTP/1.1" 200 None
+2024-08-11 23:10:52,718 - INFO - Background Info: Total Episodes: 21
+2024-08-11 23:10:52,718 - INFO - Background Info: Episode ID: {139: 1320269, 140: 1338421, 141: 1338422, 142: 1338423, 143: 1338424, 144: 1344361, 145: 1344362, 146: 1344363, 147: 1344364, 148: 1344365, 149: 1344366, 150: 1344367, 151: 1344368}
+2024-08-11 23:10:52,721 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:53,319 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/425587 HTTP/1.1" 200 None
+2024-08-11 23:10:53,324 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:10:53,617 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/39/0b/425587_awe87.jpg HTTP/1.1" 200 231244
+2024-08-11 23:10:56,805 - INFO - Background Info: Start Refresh Bangumi Data: 败犬女主太多了！
+2024-08-11 23:10:56,807 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:57,474 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E8%B4%A5%E7%8A%AC%E5%A5%B3%E4%B8%BB%E5%A4%AA%E5%A4%9A%E4%BA%86%EF%BC%81?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:10:57,476 - INFO - Background Info: Bangumi ID: 464376
+2024-08-11 23:10:57,478 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:58,046 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=464376&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:10:58,048 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:58,602 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/464376 HTTP/1.1" 200 None
+2024-08-11 23:10:58,606 - INFO - Background Info: Total Episodes: 12
+2024-08-11 23:10:58,607 - INFO - Background Info: Episode ID: {1: 1354646, 2: 1354647, 3: 1354648, 4: 1354649, 5: 1354650}
+2024-08-11 23:10:58,610 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:10:59,208 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/464376 HTTP/1.1" 200 None
+2024-08-11 23:10:59,213 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:10:59,519 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/e4/dc/464376_NsZRw.jpg HTTP/1.1" 200 422927
+2024-08-11 23:11:02,754 - INFO - Background Info: Start Refresh Bangumi Data: 擅长逃跑的殿下
+2024-08-11 23:11:02,763 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:11:04,173 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E6%93%85%E9%95%BF%E9%80%83%E8%B7%91%E7%9A%84%E6%AE%BF%E4%B8%8B?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:11:04,178 - INFO - Background Info: Bangumi ID: 424573
+2024-08-11 23:11:04,193 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:11:04,778 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=424573&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:11:04,789 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:11:05,365 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/424573 HTTP/1.1" 200 None
+2024-08-11 23:11:05,366 - INFO - Background Info: Total Episodes: 12
+2024-08-11 23:11:05,366 - INFO - Background Info: Episode ID: {1: 1353809, 2: 1353810, 3: 1353811, 4: 1353812, 5: 1353813, 6: 1353814, 7: 1353815}
+2024-08-11 23:11:05,368 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:11:05,940 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/424573 HTTP/1.1" 200 None
+2024-08-11 23:11:05,949 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:11:06,265 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/32/14/424573_YYLzT.jpg HTTP/1.1" 200 605749
+2024-08-11 23:11:09,526 - INFO - Background Info: Start Refresh Bangumi Data: 为何我的世界被遗忘了？
+2024-08-11 23:11:09,536 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:11:10,246 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E4%B8%BA%E4%BD%95%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E8%A2%AB%E9%81%97%E5%BF%98%E4%BA%86%EF%BC%9F?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:11:10,255 - INFO - Background Info: Bangumi ID: 446615
+2024-08-11 23:11:10,256 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:11:10,854 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=446615&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:11:10,859 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:11:11,476 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/446615 HTTP/1.1" 200 None
+2024-08-11 23:11:11,480 - INFO - Background Info: Total Episodes: 12
+2024-08-11 23:11:11,481 - INFO - Background Info: Episode ID: {1: 1353434, 2: 1353435, 3: 1353436, 4: 1353437, 5: 1353438}
+2024-08-11 23:11:11,484 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:11:12,066 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/446615 HTTP/1.1" 200 None
+2024-08-11 23:11:12,073 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:11:12,366 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/b4/f9/446615_qpXQH.jpg HTTP/1.1" 200 455222
+2024-08-11 23:11:15,600 - INFO - Background Info: Start Refresh Bangumi Data: 逃走中 GREAT MISSION
+2024-08-11 23:11:15,607 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:11:16,275 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E9%80%83%E8%B5%B0%E4%B8%AD%20GREAT%20MISSION?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:11:16,280 - INFO - Background Info: Bangumi ID: 413786
+2024-08-11 23:11:16,281 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:11:16,872 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=413786&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:11:16,927 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:11:17,498 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/413786 HTTP/1.1" 200 None
+2024-08-11 23:11:17,500 - INFO - Background Info: Total Episodes: 0
+2024-08-11 23:11:17,500 - INFO - Background Info: Episode ID: {1: 1182930, 2: 1182931, 3: 1182932, 4: 1182933, 5: 1182934, 6: 1182935, 7: 1182936, 8: 1182937, 9: 1182938, 10: 1182939, 11: 1182940, 12: 1182941, 13: 1191854, 14: 1191855, 15: 1191856, 16: 1191857, 17: 1191858, 18: 1191859, 19: 1191860, 20: 1191861, 21: 1191862, 22: 1191863, 23: 1191864, 24: 1191865, 25: 1191866, 26: 1191867, 27: 1191868, 28: 1191869, 29: 1191870, 30: 1191871, 31: 1191872, 32: 1191873, 33: 1191874, 34: 1191875, 35: 1191876, 36: 1191877, 37: 1191878, 38: 1191879, 39: 1191880, 40: 1191881, 41: 1191882, 42: 1191883, 43: 1191884, 44: 1191885, 45: 1191886, 46: 1191887, 47: 1191888, 48: 1191889, 49: 1191890, 50: 1313305, 51: 1313306, 52: 1313307, 53: 1313308, 54: 1337103, 55: 1337104, 56: 1337105, 57: 1337106, 58: 1348525, 59: 1348526, 60: 1348527, 61: 1348528, 62: 1348529, 63: 1360109, 64: 1360110, 65: 1360111, 66: 1360112, 67: 1379342}
+2024-08-11 23:11:17,504 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:11:18,059 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/413786 HTTP/1.1" 200 None
+2024-08-11 23:11:18,066 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:11:18,380 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/80/50/413786_W6T7k.jpg HTTP/1.1" 200 278058
+2024-08-11 23:11:21,597 - INFO - Background Info: Start Refresh Bangumi Data: Wonderful 光之美少女！
+2024-08-11 23:11:21,599 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:11:23,041 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/Wonderful%20%E5%85%89%E4%B9%8B%E7%BE%8E%E5%B0%91%E5%A5%B3%EF%BC%81?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:11:23,043 - INFO - Background Info: Bangumi ID: 467784
+2024-08-11 23:11:23,044 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:11:23,630 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=467784&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:11:23,650 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:11:25,013 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/467784 HTTP/1.1" 200 None
+2024-08-11 23:11:25,016 - INFO - Background Info: Total Episodes: 0
+2024-08-11 23:11:25,016 - INFO - Background Info: Episode ID: {1: 1296849, 2: 1296850, 3: 1296851, 4: 1296852, 5: 1296853, 6: 1296854, 7: 1296855, 8: 1296856, 9: 1296857, 10: 1296858, 11: 1296859, 12: 1296860, 13: 1334023, 14: 1334024, 15: 1334025, 16: 1334026, 17: 1334027, 18: 1334028, 19: 1334029, 20: 1334030, 21: 1334031, 22: 1334032, 23: 1334033, 24: 1334034, 25: 1360031, 26: 1360032, 27: 1360033, 28: 1360034, 29: 1360035}
+2024-08-11 23:11:25,019 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:11:25,596 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/467784 HTTP/1.1" 200 None
+2024-08-11 23:11:25,603 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:11:25,899 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/17/62/467784_4422O.jpg HTTP/1.1" 200 816625
+2024-08-11 23:16:03,958 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:16:04,561 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/475354 HTTP/1.1" 200 None
+2024-08-11 23:16:04,564 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:16:04,888 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/85/c1/475354_QyO6r.jpg HTTP/1.1" 200 171029
+2024-08-11 23:25:48,093 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:25:48,688 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/397604 HTTP/1.1" 200 None
+2024-08-11 23:25:48,691 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:25:49,025 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/66/6d/397604_TgJ63.jpg HTTP/1.1" 200 836170
+2024-08-11 23:29:54,662 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:29:55,308 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E4%BA%9A%E6%89%98%E8%8E%89%20-%E6%88%91%E6%8C%9A%E7%88%B1%E7%9A%84%E6%97%B6%E5%85%89-?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:32:46,297 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:32:46,922 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E4%BA%9A%E6%89%98%E8%8E%89-%E6%88%91%E6%8C%9A%E7%88%B1%E7%9A%84%E6%97%B6%E5%85%89-?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:40:25,591 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:40:26,239 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E4%BA%9A%E6%89%98%E8%8E%89-%E6%88%91%E6%8C%9A%E7%88%B1%E7%9A%84%E6%97%B6%E5%85%89-?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:40:26,244 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:40:26,846 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=397604&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:40:26,862 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:40:27,443 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/397604 HTTP/1.1" 200 None
+2024-08-11 23:40:27,449 - INFO - Background Info: Total Episodes: 13
+2024-08-11 23:40:27,450 - INFO - Background Info: Episode ID: {1: 1352917, 2: 1352918, 3: 1352919, 4: 1352920, 5: 1352921}
+2024-08-11 23:40:27,466 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:40:28,057 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/397604 HTTP/1.1" 200 None
+2024-08-11 23:40:28,066 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:40:28,386 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/66/6d/397604_TgJ63.jpg HTTP/1.1" 200 836170
+2024-08-11 23:42:48,703 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:42:49,334 - DEBUG - https://api.bgm.tv:443 "GET /search/subject/%E4%BA%9A%E6%89%98%E8%8E%89-%E6%88%91%E6%8C%9A%E7%88%B1%E7%9A%84%E6%97%B6%E5%85%89-?type=2&responseGroup=small HTTP/1.1" 200 None
+2024-08-11 23:42:49,346 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:42:49,945 - DEBUG - https://api.bgm.tv:443 "GET /v0/episodes?subject_id=397604&limit=100&offset=0 HTTP/1.1" 200 None
+2024-08-11 23:42:49,965 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:42:50,535 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/397604 HTTP/1.1" 200 None
+2024-08-11 23:42:50,545 - INFO - Background Info: Total Episodes: 13
+2024-08-11 23:42:50,545 - INFO - Background Info: Episode ID: {1: 1352917, 2: 1352918, 3: 1352919, 4: 1352920, 5: 1352921}
+2024-08-11 23:42:50,559 - DEBUG - Starting new HTTPS connection (1): api.bgm.tv:443
+2024-08-11 23:42:51,140 - DEBUG - https://api.bgm.tv:443 "GET /v0/subjects/397604 HTTP/1.1" 200 None
+2024-08-11 23:42:51,142 - DEBUG - Starting new HTTPS connection (1): lain.bgm.tv:443
+2024-08-11 23:42:51,464 - DEBUG - https://lain.bgm.tv:443 "GET /pic/cover/l/66/6d/397604_TgJ63.jpg HTTP/1.1" 200 836170

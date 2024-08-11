@@ -33,7 +33,7 @@ async def add_rss(rss: Model_RSS_Add):
         return {"result": False}
 
 
-@router.post("/delete", summary="删除RSS订阅", description="""
+@router.delete("/delete", summary="删除RSS订阅", description="""
 用于删除一个RSS订阅。
 
 

@@ -10,6 +10,7 @@ class Parse:
             if response.status_code == 200:
                 item_data = []
                 rss_content = response.content.decode("utf-8")
+                print(rss_content)
                 xml_tree = ET.fromstring(rss_content)
                 items = xml_tree.findall(".//item")
                 for item in items:
@@ -24,3 +25,6 @@ class Parse:
         except Exception as e:
             LOG_ERROR(e)
             return None
+        
+            
+        
