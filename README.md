@@ -1,5 +1,7 @@
 # easybangumi 追番助手
 
+![前端根本不会啊！！](https://github.com/plsy1/easybangumi/blob/main/pictures/frontend.png?raw=true)
+
 ## Features
 
 - ✅ Automatically download subscribed anime
