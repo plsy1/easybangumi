@@ -1,0 +1,21 @@
+<!-- system-info.component.html -->
+<div class="system-info-container">
+    <app-sidebar></app-sidebar>
+  
+    <div class="logs-content">
+      <ng-container *ngIf="loading">
+        <p>Loading logs...</p>
+      </ng-container>
+  
+      <ng-container *ngIf="!loading && logData">
+        <h2>Logs for {{ logData.filename }}</h2>
+        <ul>
+          <li *ngFor="let line of logData.content">{{ line }}</li>
+        </ul>
+      </ng-container>
+  
+      <ng-container *ngIf="!loading && !logData">
+        <p>No logs available.</p>
+      </ng-container>
+    </div>
+  </div>

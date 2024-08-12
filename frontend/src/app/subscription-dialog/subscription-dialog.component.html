@@ -1,11 +1,19 @@
 <div class="dialog-container">
-  <div class="dialog-header">添加订阅</div>
+  <div class="dialog-header">{{data.title}}</div>
+  <mat-form-field *ngIf="data.type === '1'">
+    <mat-label>订阅类型</mat-label>
+    <mat-select [(ngModel)]="subscriptionType">
+      <mat-option value="1">单一</mat-option>
+      <mat-option value="2">合集</mat-option>
+    </mat-select>
+  </mat-form-field>
   <mat-form-field>
     <mat-label>订阅地址</mat-label>
     <input matInput [(ngModel)]="subscriptionText" />
   </mat-form-field>
   <div class="dialog-footer">
-    <button mat-button (click)="submit()">确定</button>
-    <button mat-button (click)="close()">取消</button>
+    <button *ngIf="data.type === '1'" mat-button (click)="submit_add()">添加</button>
+    <button *ngIf="data.type === '2'" mat-button (click)="submit_collect()">收集</button>
+    <button mat-button (click)="close()">关闭</button>
   </div>
 </div>

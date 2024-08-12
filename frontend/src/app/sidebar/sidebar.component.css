@@ -1,47 +1,88 @@
+/* sidebar.component.css */
+
 .sidebar {
-  width: 5%;
+  width: 7%;
   height: 100%;
-  background: linear-gradient(to bottom, rgb(96, 93, 200), rgb(80, 80, 150)); /* 渐变色背景 */
-  color: white;
-  position: fixed;
+  background-color: white; /* 更改为你希望的背景色 */
+  border-radius: 10px; /* 圆角 */
+  box-shadow: 0 4px 20px rgba(16, 16, 16, 0.2); /* 阴影效果 */
+  position: fixed; /* 固定在侧边 */
   left: 0;
-  top: 0;
-  padding: 20px;
-  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3); /* 更强的阴影效果 */
-  border-radius: 0 15px 15px 0; /* 更圆的圆角 */
+  bottom:0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: width 0.3s; /* 平滑的宽度过渡 */
-}
-
-.sidebar:hover {
-  width: 8%; /* 鼠标悬停时扩展宽度 */
+  border: 2px solid rgb(96, 93, 200); /* 边框颜色为 accent color */
 }
 
 .sidebar ul {
   list-style: none;
   padding: 0;
+  margin: 0;
   width: 100%;
+  display: flex;
+  flex-direction: column; /* 垂直排列 */
+  align-items: center; /* 水平居中 */
 }
 
-.sidebar ul li {
-  margin: 20px 0; /* 增加间距 */
-  width: 100%;
+.sidebar li {
+  width: 100%; /* 确保 li 元素占满 ul 的宽度 */
+  height: 60px;
+  display: flex;
+  justify-content: center; /* 水平居中 li 内容 */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2); /* 分隔符样式 */
 }
 
-.sidebar ul li a {
-  color: white;
+.sidebar a {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
   text-decoration: none;
+  color: black;
   font-size: 18px;
-  display: block;
-  padding: 10px;
+  font-weight: 500;
   border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s, transform 0.3s; /* 添加平滑过渡效果 */
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  width: 100%; /* 确保链接占满 li 的宽度 */
+  justify-content: center; /* 水平居中 a 内容 */
 }
 
-.sidebar ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.3); /* 更透明的白色 */
-  color: rgb(96, 93, 200); /* 在悬停时改变文字颜色 */
-  transform: translateX(5px); /* 鼠标悬停时微移效果 */
+.sidebar a:hover {
+  background-color: rgb(96, 93, 200); /* hover 背景颜色 */
+  color: white; /* hover 文字颜色 */
+  transform: scale(1.05); /* hover 动效 */
+}
+
+.sidebar a.active-link {
+  background-color: rgb(96, 93, 200); /* active 背景颜色 */
+  color: white; /* active 文字颜色 */
+  font-weight: bold;
+}
+
+.highlight-ul1, .highlight-ul2 {
+  width: 100%;
+  text-align: center;
+}
+
+.sidebar a i {
+  margin-right: 10px; /* 图标与文字间距 */
+}
+
+.active-link {
+  background-color: rgb(96, 93, 200); /* 突出显示的背景颜色 */
+  color: white; /* 突出显示的文字颜色 */
+}
+
+.highlight-ul1 a::before {
+  content: '🎬';
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.highlight-ul2 a::before {
+  content: '📔';
+  font-size: 30px;
+  margin-right: 10px;
 }

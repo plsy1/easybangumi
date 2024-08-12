@@ -1,4 +1,4 @@
-export interface HousingLocation {
+export interface cardData {
     id: number;
     link: string;
     title: string;
@@ -11,3 +11,9 @@ export interface HousingLocation {
     message?: string;
     data?: T;
   }
+
+export interface BangumiInfo {
+  id: string; 
+  eps: { [key: string]: number };
+  total: number;
+}

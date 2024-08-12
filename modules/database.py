@@ -410,10 +410,10 @@ class DB:
                 (bangumi_title,)
             )
             conn.commit()
-            print(f"Successfully deleted bangumi with title: {bangumi_title}")
+            LOG_INFO(f"Successfully deleted bangumi with title: {bangumi_title}")
 
         except sqlite3.Error as e:
-            LOG_ERROR(e)
+            LOG_ERROR('bangumi_delete_by_rss_single_id',e)
         finally:
             conn.close()
             
@@ -429,6 +429,6 @@ class DB:
             )
             conn.commit()
         except sqlite3.Error as e:
-            LOG_ERROR(e)
+            LOG_ERROR('download_status_delete_by_rss_single_id',e)
         finally:
             conn.close()

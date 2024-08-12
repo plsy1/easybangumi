@@ -1,0 +1,48 @@
+/* system-info.component.css */
+.system-info-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  height: 100vh; /* 确保容器的高度为视口高度 */
+  align-items: center; /* 水平居中对齐 */
+}
+
+.logs-content {
+  width: 70%; /* 占据70%的宽度 */
+  max-height: 70vh; /* 占据70%的视口高度，限制最大高度 */
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* 添加垂直滚动条 */
+  box-sizing: border-box; /* 包含边框和内边距在宽度和高度计算中 */
+}
+
+.logs-content h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: rgb(96, 93, 200); /* 使用你的主色调 */
+}
+
+.logs-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.logs-content li {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  word-wrap: break-word; /* 确保长行能够换行 */
+}
+
+.logs-content li:last-child {
+  border-bottom: none; /* 最后一项没有下边框 */
+}
+
+.logs-content p {
+  font-style: italic;
+  color: #666;
+}

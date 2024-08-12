@@ -1,13 +1,11 @@
-import requests
-import json
-import os, time
+import os, time, json, requests, re
 from core.logs import LOG_INFO, LOG_ERROR
 from core.config import conf
-
 from enum import Enum
 from utils.rename import *
 from urllib.parse import quote
 from modules.database import DB
+from bs4 import BeautifulSoup
 
 class CollectionType(Enum):
     WISH = 1
@@ -54,6 +52,29 @@ class Bangumi_Helper:
                     return subject_id
             return None
         except Exception as e:
+            LOG_ERROR('Get_SubjectID_By_Name',e)
+            return None
+        
+    @staticmethod    
+    def get_SubjectID_From_Link(url):
+        try:
+            bangumi_id = Bangumi_Helper.get_bangumi_id_from_url(url)
+            if bangumi_id is None:
+                LOG_ERROR("get_subject_id_from_rss_link: No bangumiId found in the URL")
+                return None
+            url = f'https://mikanani.me/Home/Bangumi/{bangumi_id}'
+            response = requests.get(url, timeout=10)
+            response.raise_for_status()
+            soup = BeautifulSoup(response.content, 'html.parser')
+            match = re.search(r'https://bgm.tv/subject/(\d+)', str(soup))
+            if match:
+                subject_id = match.group(1)  # 获取数字 ID
+                return subject_id
+            else:
+                LOG_ERROR("get_subject_id_from_rss_link: No matching subject ID found")
+                return None
+        except Exception as e:
+            LOG_ERROR('get_subject_id_from_rss_link',e)
             return None
         
     @staticmethod
@@ -165,14 +186,26 @@ class Bangumi_Helper:
             print(f"Image saved as {file_name}")
         else:
             print("Failed to download image")
+            
+    @staticmethod        
+    def get_bangumi_id_from_url(url):
+        match = re.search(r'bangumiId=(\d+)', url)
+        if match:
+            bangumi_id = match.group(1)
+            return bangumi_id
+        else:
+            return None
+        
+    
         
 
 class Bangumi:
 
     @staticmethod
-    def Init_Episodes_Information_By_Bangumi_Title(title):
+    def Init_Episodes_Information_By_RSS_Link(title,link):
         try:
-            subject_id = Bangumi_Helper.Get_SubjectID_By_Name(title)
+            subject_id = Bangumi_Helper.get_SubjectID_From_Link(link)
+            subject_id = str(subject_id)
             episodes = Bangumi_Helper.Get_Episodes_By_SubjectID(subject_id)
             total_episodes = Bangumi_Helper.Get_Total_Episodes_By_SubjectID(subject_id)
             episodes_str = json.dumps(episodes)

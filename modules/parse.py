@@ -13,6 +13,7 @@ class Parse:
                 print(rss_content)
                 xml_tree = ET.fromstring(rss_content)
                 items = xml_tree.findall(".//item")
+                print(items)
                 for item in items:
                     title = item.find("title").text
                     link = item.find("link").text
@@ -21,7 +22,7 @@ class Parse:
                     item_data.append(
                         {"title": title, "link": link, "torrent_url": torrent_url}
                     )
-                return item_data
+                return None
         except Exception as e:
             LOG_ERROR(e)
             return None

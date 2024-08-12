@@ -1,12 +1,16 @@
-import { SidebarComponent } from './sidebar/sidebar.component';
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-
+import { SystemInfoComponent } from './system-info/system-info.component';
 const routeConfig: Routes = [
     {
       path: '',
       component: HomeComponent,
-      title: 'EasyBangumi - 全自动追番'
+      title: '番剧订阅 - EasyBangumi - 全自动追番'
+    },
+    {
+      path: 'systemInfo',
+      component: SystemInfoComponent,
+      title: '系统日志 - EasyBangumi - 全自动追番'
     }
   ];
   

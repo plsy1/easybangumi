@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
-import { ApiResponse, HousingLocation } from './card';
+import { ApiResponse, cardData } from './card';
 
 @Injectable({
   providedIn: 'root'
 })
-export class HousingService {
+export class CardService {
 
   constructor() { }
 
   url = 'http://localhost:18964/api/v1/info/getBangumiSubscription';
 
-  async getAllHousingLocations(): Promise<HousingLocation[]> {
+  async getAllCards(): Promise<cardData[]> {
     try {
       const response = await fetch(this.url);
       
@@ -18,7 +18,7 @@ export class HousingService {
         throw new Error('Network response was not ok');
       }
 
-      const data: ApiResponse<HousingLocation[]> = await response.json();
+      const data: ApiResponse<cardData[]> = await response.json();
 
       if (data.success) {
         return data.data ?? [];
@@ -30,10 +30,6 @@ export class HousingService {
       console.error('请求失败:', error);
       return [];
     }
-  }
-  async getHousingLocationById(id: number): Promise<HousingLocation | undefined> {
-    const data = await fetch(`${this.url}/${id}`);
-    return await data.json() ?? {};
   }
 
   submitApplication(firstName: string, lastName: string, email: string) {

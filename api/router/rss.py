@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Depends
 from core.rss import RSS,RSS_Type
+from core.logs import LOG_ERROR, LOG_INFO
 from utils import tools
 from api.schemas.rss import Model_RSS_Add, Model_RSS_Delete, Model_RSS_Collect
 from api.schemas import response
@@ -30,7 +31,7 @@ async def add_rss(rss: Model_RSS_Add):
     if RSS.Add(rss.url, rss.type):
         return {"result": True}
     else:
-        return {"result": False}
+        return JSONResponse(content={"error": "Add Failed"}, status_code=400)
 
 
 @router.delete("/delete", summary="删除RSS订阅", description="""
@@ -69,11 +70,11 @@ async def delete_rss(Model: Model_RSS_Delete):
 """)
 async def collect_rss(Model: Model_RSS_Collect):
     if not tools.is_valid_url(Model.url):
-        return {"error": "Invalid URL"}
+        return JSONResponse(content={"error": "Invalid URL"}, status_code=400)
     if RSS.Collect(Model.url):
-        return {"result": True}
+        return {"result": True} 
     else:
-        return {"result": False}
+        return JSONResponse(content={"error": "Collect Failed"}, status_code=400)
 
 @router.get("/refresh", summary="刷新RSS订阅", description="""
 推送一个RSS订阅的内容到下载器。

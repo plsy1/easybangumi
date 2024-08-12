@@ -1,19 +1,41 @@
 import { Component } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
+  imports: [RouterModule], // 引入 RouterModule
   template: `
     <nav class="sidebar">
-      <ul>
-        <li><a routerLink="/home">番剧订阅</a></li>
-        <li><a routerLink="/contact">系统日志</a></li>
-        <li><a routerLink="/contact">全局设置</a></li>
-      </ul>
+    <ul class="highlight-ul1">
+      <li>
+        <a
+          routerLink="/"
+          routerLinkActive="active-link"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+        番剧订阅
+        </a>
+      </li>
+    </ul>
+    <ul class="highlight-ul2">
+      <li>
+        <a
+          routerLink="/systemInfo"
+          routerLinkActive="active-link"
+        >
+        系统日志
+        </a>
+      </li>
+    </ul>
     </nav>
   `,
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent {
-  // 你可以在这里添加任何需要的逻辑
+  constructor(private router: Router) {}
+
+  navigateTo(route: string) {
+    this.router.navigate([route]);
+  }
 }

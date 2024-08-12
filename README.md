@@ -52,7 +52,7 @@ docker build -t easybangumi .
 
 ### Docker Cli
 ```bash
-docker run  \
+docker run -d \
 --name easybangumi \
 --network=host \
 -e TZ=Asia/Shanghai \
@@ -69,6 +69,7 @@ docker run  \
 -e RSS_SCRAPE="TMDB" \ #optional
 -e BANGUMI_TOKEN="your token" \ #optional
 -v /path/to/your/data.db:/app/data.db \
+-p 1888:80 \
 -p 18964:18964 \ #"The backend address, visit /docs to view the API documentation."
 easybangumi
 ```

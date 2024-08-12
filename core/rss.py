@@ -31,6 +31,16 @@ class RSS_Helper():
                 LOG_ERROR(e)
                 
     @staticmethod
+    def get_subject_id_from_rss_link(link):
+        try:
+            response = requests.get(link, timeout=10)
+            soup = BeautifulSoup(response.content, 'xml')
+            title = soup.find('link').text
+            return title
+        except Exception as e:
+                LOG_ERROR(e)
+                
+    @staticmethod
     def get_rss_link_from_torrent_info_page_link(link):
         try:
             response = requests.get(link, timeout=10)
@@ -85,7 +95,7 @@ class RSS:
                 item = (link,title,season,bangumi_title)
                 DB.rss_single_insert(item)
                 ## 初始化剧集信息
-                Bangumi.Init_Episodes_Information_By_Bangumi_Title(bangumi_title)
+                Bangumi.Init_Episodes_Information_By_RSS_Link(bangumi_title,link)
                 
             elif Type == RSS_Type.GATHER:
                 if DB.rss_gather_is_link_exist(link):
