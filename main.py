@@ -10,8 +10,8 @@ from modules.database import DB
 def init():
     init_routers()
     DB.create_table()
-    #RSS.Init()
-    #Scheduler.run_scheduler()
+    RSS.Init()
+    Scheduler.run_scheduler()
 
 
 
