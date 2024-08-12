@@ -27,5 +27,3 @@ EOF
 
 mv config.yaml /app/conf/config.yaml
 
-# 启动应用程序
-python main.py
