@@ -69,6 +69,7 @@ docker run -d \
 -e RSS_SCRAPE="TMDB" \ #optional
 -e BANGUMI_TOKEN="your token" \ #optional
 -v /path/to/your/data.db:/app/data.db \
+-v /path/to/your/bangumi/cover:/app/img \
 -p 1888:80 \
 -p 18964:18964 \ #"The backend address, visit /docs to view the API documentation."
 easybangumi
