@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 from enum import Enum
 from utils.rename import *
+from utils.thirdparty.LibConnector import EpisodeReName_get_episode_name
 
 class RSS_Type(Enum):
     SINGLE = 1
@@ -62,7 +63,42 @@ class RSS_Helper():
                 result = p_tag.get_text(strip=True)
                 return result
         except Exception as e:
-                LOG_ERROR(e)   
+                LOG_ERROR(e)
+                
+                
+    @staticmethod
+    def Torrents_File_Rename():
+        try:
+            torrents = QB.qb.torrents_info()
+            for torrent in torrents:
+                tags = torrent.get('tags')
+                tags = tags.split(', ')
+                if conf.config['qbittorrent']['tag'] not in tags: continue
+                if '已整理' in tags: continue
+                torrent_hash = torrent.get("hash")
+                save_path = torrent.get("save_path")
+                files = QB.get_torrent_file_by_hash(torrent_hash)
+                for file in files:
+                    old_path = file.get("name")
+                    if old_path:
+                        full_path = os.path.join(save_path, old_path)
+                        new_path = EpisodeReName_get_episode_name(full_path)
+                        if new_path:
+                            QB.qb.torrents.rename_file(
+                                torrent_hash=torrent_hash,
+                                new_path=new_path,
+                                old_path=old_path,
+                            )
+                        else:
+                            LOG_ERROR(f"Rename failed: {old_path}")
+                    else:
+                        LOG_ERROR(
+                            "File name not found for torrent hash: ", torrent_hash
+                        )
+                QB.add_tag_by_hash(tag='已整理', hash = torrent_hash)
+
+        except Exception as e:
+            LOG_ERROR("An error occurred: ", e)   
         
 
 class RSS:
@@ -202,7 +238,8 @@ class RSS:
             if RSS.Push_torrent_file_to_downloader(item,Path) == True:
                 DB.rss_items_set_pushed_to_downloader_by_title(item['title'])
                 if conf.Telegram:
-                    TGBOT.Send_Message(f"【番剧更新提醒】\n{bangumi_name}  更新了。")       
+                    TGBOT.Send_Message(f"【番剧更新提醒】\n{bangumi_name}  更新了。")
+                RSS_Helper.Torrents_File_Rename()       
 
         """查找新的单一订阅
         """    

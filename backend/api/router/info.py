@@ -74,3 +74,12 @@ async def get_bangumi_info(bangumi_title):
     }
 
     return response
+
+
+
+
+@router.get("/nowcwd", summary="", description="""
+""")
+async def get_bangumi_info():
+    current_directory = os.getcwd()
+    return JSONResponse(content={"dir": current_directory}, status_code=200)
