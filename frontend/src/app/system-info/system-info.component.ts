@@ -2,11 +2,12 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 import { LogsData } from '../logs';
+import { NgSimpleSidebarModule, NgSimpleSidebarService, SimpleSidebarPosition, SimpleSidebarItem } from 'ng-simple-sidebar';
 
 @Component({
   selector: 'app-system-info',
   standalone: true,
-  imports: [SidebarComponent, CommonModule],
+  imports: [SidebarComponent, CommonModule, NgSimpleSidebarModule],
   templateUrl: './system-info.component.html',
   styleUrls: ['./system-info.component.css']
 })
@@ -15,12 +16,43 @@ export class SystemInfoComponent implements OnInit, OnDestroy {
   loading = true;   // 加载状态
   private apiUrl = 'http://localhost:18964/api/v1/info/getSystemLogs'; 
   private intervalId?: number; // 定时器ID
+  sidebarItems: SimpleSidebarItem[] = [];
 
-  constructor() {}
+  constructor(private ngSimpleSidebarService: NgSimpleSidebarService) {
+
+  }
+
 
   ngOnInit() {
     this.loadLogs();
     this.intervalId = window.setInterval(() => this.loadLogs(), 10000); 
+    this.sidebarItems = [
+      {
+        name: '首页',
+        icon: 'fas fa-home',
+        routerLink: ['/'],
+        position: SimpleSidebarPosition.top
+      },
+      {
+        name: '系统日志',
+        icon: 'fas fa-cog',
+        routerLink: ['/systemInfo'],
+        position: SimpleSidebarPosition.bottom
+      }
+    ];
+
+    // Configure sidebar items and icons
+    this.ngSimpleSidebarService.addItems(this.sidebarItems);
+    this.ngSimpleSidebarService.configure({
+      openIcon: 'las la-bars',
+      closeIcon: 'las la-times'
+    });
+
+    // Optionally, manage the sidebar state
+    this.ngSimpleSidebarService.open();
+    this.ngSimpleSidebarService.close();
+
+    
   }
 
   ngOnDestroy() {

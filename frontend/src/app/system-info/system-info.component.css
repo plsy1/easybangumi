@@ -1,3 +1,36 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.content-wrapper {
+display: flex;
+flex-wrap: nowrap;
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  flex-grow: 1; /* 允许 content 占据剩余的空间 */
+  padding: 20px;
+  width: 100%; /* 确保 content 横向占满 */
+  box-sizing: border-box;
+}
+
+.logs-content {
+  width: 100%; /* 确保 logs-content 占据 content 的全部宽度 */
+  min-height: 70vh;
+  max-height: 70vh;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* 添加垂直滚动条 */
+  box-sizing: border-box; /* 包含边框和内边距在宽度和高度计算中 */
+}
+
+
 /* system-info.component.css */
 .system-info-container {
   display: flex;
@@ -8,17 +41,7 @@
   align-items: center; /* 水平居中对齐 */
 }
 
-.logs-content {
-  width: 70%; /* 占据70%的宽度 */
-  max-height: 70vh; /* 占据70%的视口高度，限制最大高度 */
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  overflow-y: auto; /* 添加垂直滚动条 */
-  box-sizing: border-box; /* 包含边框和内边距在宽度和高度计算中 */
-}
+
 
 .logs-content h2 {
   margin-top: 0;

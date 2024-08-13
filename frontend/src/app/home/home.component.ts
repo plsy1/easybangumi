@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { bangumiCard } from '../bangumi-card/bangumi-card';
 import { cardData } from '../card';
@@ -6,6 +6,10 @@ import { CardService } from '../card-service';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 import { MatDialog } from '@angular/material/dialog';
 import { SubscriptionDialogComponent } from '../subscription-dialog/subscription-dialog.component';
+import { NgSimpleSidebarModule, NgSimpleSidebarService, SimpleSidebarPosition, SimpleSidebarItem } from 'ng-simple-sidebar';
+
+
+
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -13,11 +17,14 @@ import { SubscriptionDialogComponent } from '../subscription-dialog/subscription
     CommonModule,
     bangumiCard,
     SidebarComponent,
-    
+    NgSimpleSidebarModule
   ],
   template: `
-  <app-sidebar></app-sidebar>
-  <section class="search-bar">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <div class="content-wrapper">
+	<lib-ng-simple-sidebar></lib-ng-simple-sidebar>
+    <div class="content">
+    <section class="search-bar">
     <form>
       <input type="text" placeholder="以番剧名称搜索" #filter (input)="filterResults(filter.value)">
       <button class="primary" type="button" (click)="addSubscription()">添加订阅</button>
@@ -31,17 +38,52 @@ import { SubscriptionDialogComponent } from '../subscription-dialog/subscription
       (subscriptionDeleted)="handleSubscriptionDeleted()">
     </app-bangumi-card>
   </section>
+    </div>
+  </div>
   `,
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+
+  sidebarItems: SimpleSidebarItem[] = [];
 
   cardList: cardData[] = [];
   filteredCartList: cardData[] = [];
   CardsList: CardService = inject(CardService);
   dialog: MatDialog = inject(MatDialog);
 
-  constructor() {
+
+  ngOnInit() {
+    this.sidebarItems = [
+      {
+        name: '首页',
+        icon: 'fas fa-home',
+        routerLink: ['/'],
+        position: SimpleSidebarPosition.top
+      },
+      {
+        name: '系统日志',
+        icon: 'fas fa-cog',
+        routerLink: ['/systemInfo'],
+        position: SimpleSidebarPosition.bottom
+      }
+    ];
+
+    // Configure sidebar items and icons
+    this.ngSimpleSidebarService.addItems(this.sidebarItems);
+    this.ngSimpleSidebarService.configure({
+      openIcon: 'fas fa-bars',
+      closeIcon: 'fas fa-times'
+    });
+
+    // Optionally, manage the sidebar state
+    this.ngSimpleSidebarService.open();
+    this.ngSimpleSidebarService.close();
+
+    
+  }
+
+  constructor(private ngSimpleSidebarService: NgSimpleSidebarService) {
     this.loadCards();
   }
 

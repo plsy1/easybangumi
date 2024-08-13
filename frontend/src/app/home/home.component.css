@@ -1,75 +1,108 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.content-wrapper {
+display: flex;
+flex-wrap: nowrap;
+}
+
+.content {
+  display: flex;
+  flex-direction: column; /* 改成纵向排列 */
+  align-items: flex-start;
+  width: 100%;
+  padding: 20px;
+}
+
 .results {
   display: grid;
-  column-gap: 14px;
-  row-gap: 14px;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 250px));
-  margin-top: 50px;
-  justify-content: space-around;
-  margin-left:10%;
-  margin-right:5%;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 允许卡片根据容器宽度扩展 */
+  gap: 14px; /* 用 `gap` 替换 `column-gap` 和 `row-gap` */
+  width: 100%; /* 确保 `.results` 容器占满父元素的宽度 */
+  margin-top: 1vb;
+}
+
+input[type="text"] {
+  border: solid 1px var(--primary-color);
+  padding: 10px;
+  border-radius: 8px;
+  margin-right: 4px;
+  display: inline-block;
+  width: 30%;
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+  .results {
+      grid-template-columns: repeat(2, 1fr);
+  }
+  input[type="text"] {
+      width: 70%;
+  }   
+}
+
+@media (max-width: 499px) {
+  .results {
+      grid-template-columns: 1fr;
+  }    
 }
 
 
+button.primary {
+  background-color: rgb(96, 93, 200);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-right: 10px; /* 添加右边距 */
+}
 
-  .search-bar {
-    margin-left:10%;
-  }
-  
-  input[type="text"] {
-    border: solid 1px var(--primary-color);
-    padding: 10px;
-    border-radius: 8px;
-    margin-right: 4px;
-    display: inline-block;
-    width: 30%;
-  }
-  
+button.primary:last-of-type {
+  margin-right: 0; /* 去除最后一个按钮的右边距 */
+}
 
-  
-  @media (min-width: 500px) and (max-width: 768px) {
-    .results {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    input[type="text"] {
-        width: 70%;
-    }   
-  }
-  
-  @media (max-width: 499px) {
-    .results {
-        grid-template-columns: 1fr;
-    }    
-  }
+button.primary:hover {
+  background-color: rgb(76, 72, 170);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
 
-  
-  button.primary {
-    background-color: rgb(96, 93, 200);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    margin-right: 10px; /* 添加右边距 */
-  }
-  
-  button.primary:last-of-type {
-    margin-right: 0; /* 去除最后一个按钮的右边距 */
-  }
-  
-  button.primary:hover {
-    background-color: rgb(76, 72, 170);
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  button.primary:active {
-    background-color: rgb(56, 52, 140);
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
-  }
-  
-  button.primary:focus {
-    outline: none;
-    box-shadow: 0px 0px 0px 2px rgb(96, 93, 200);
-  }
+button.primary:active {
+  background-color: rgb(56, 52, 140);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+button.primary:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px rgb(96, 93, 200);
+}
+
+app-bangumi-card {
+  width: 100%; /* 确保卡片占满grid分配的空间 */
+  box-sizing: border-box; /* 确保内边距和边框不会影响宽度 */
+}
+
+.search-bar form {
+  display: flex;
+  width: 100%; /* 让表单宽度自适应父元素 */
+}
+
+.search-bar input[type="text"] {
+  flex: 2; /* 占据 2 份宽度，即一半 */
+  margin-right: 10px; /* 给输入框和第一个按钮之间添加右边距 */
+  box-sizing: border-box; /* 确保 padding 不会影响宽度 */
+}
+
+.search-bar button {
+  flex: 1; /* 各占据 1 份宽度 */
+  margin-right: 10px; /* 给第一个按钮和第二个按钮之间添加右边距 */
+  box-sizing: border-box; /* 确保 padding 不会影响宽度 */
+}
+
+.search-bar button:last-of-type {
+  margin-right: 0; /* 去掉最后一个按钮的右边距 */
+}
