@@ -40,20 +40,18 @@ async def get_bangumi_cover_by_name(name):
 @router.get("/getSystemLogs", summary="获取系统日志", description="""
 """)
 async def get_system_logs():
-    log_files = glob.glob(os.path.join("logs", "*.log"))
+    log_file = os.path.join("logs", "backend.log")
 
-    if not log_files:
-        return {"filename": "", "content": "No log files found."}
-
-    # 查找最后修改的日志文件
-    latest_file = max(log_files, key=os.path.getmtime)
+    # 检查日志文件是否存在
+    if not os.path.exists(log_file):
+        return {"filename": "", "content": "No log file found."}
 
     log_entries = []
-    with open(latest_file, "r", encoding="utf-8") as file:
+    with open(log_file, "r", encoding="utf-8") as file:
         for line in file:
-            log_entries.insert(0, line)
+            log_entries.insert(0, line)  # 将每一行插入到列表的开头，逆序排列
 
-    return JSONResponse(content={"filename": os.path.basename(latest_file), "content": log_entries}, status_code=200)
+    return JSONResponse(content={"filename": os.path.basename(log_file), "content": log_entries}, status_code=200)
 
 
 

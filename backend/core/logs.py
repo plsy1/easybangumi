@@ -20,11 +20,7 @@ if not os.path.exists(log_dir_path):
 
 log_formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
 
-# 主日志文件
-# log_file = f'logs/{datetime.datetime.now().strftime("%Y-%m-%d")}.log'
-log_file = os.path.join(
-    log_dir_path, f'{datetime.datetime.now().strftime("%Y-%m-%d")}.log'
-)
+log_file = os.path.join(log_dir_path, 'backend.log')
 
 file_handler = TimedRotatingFileHandler(
     log_file, when="midnight", interval=1, backupCount=7, encoding="utf-8"

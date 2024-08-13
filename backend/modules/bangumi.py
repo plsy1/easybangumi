@@ -38,6 +38,14 @@ class Bangumi_Helper:
     }
 
     @staticmethod
+    def Get_Link_By_Bangumi_Title(bangumi_title):
+        try:
+            return DB.get_rss_link_by_bangumi_title(bangumi_title)
+        except Exception as e:
+            LOG_ERROR('Get_Link_By_Bangumi_Title',e)
+            return None
+
+    @staticmethod
     def Get_SubjectID_By_Name(name):
         try:
             name = name.replace(' ', '') 
@@ -221,7 +229,10 @@ class Bangumi:
     @staticmethod
     def Refresh_Episodes_Information_By_Bangumi_Title(bangumi_title):
         try:
-            subject_id = Bangumi_Helper.Get_SubjectID_By_Name(bangumi_title)
+            link = Bangumi_Helper.Get_Link_By_Bangumi_Title(bangumi_title)
+            subject_id = Bangumi_Helper.get_SubjectID_From_Link(link)
+            subject_id = str(subject_id)
+            print(subject_id)
             episodes = Bangumi_Helper.Get_Episodes_By_SubjectID(subject_id)
             total_episodes = Bangumi_Helper.Get_Total_Episodes_By_SubjectID(subject_id)
             LOG_INFO('Total Episodes:',total_episodes)
@@ -236,14 +247,14 @@ class Bangumi:
         
                    
     @staticmethod
-    def Refresh_Episodes_Information():
+    async def Refresh_Episodes_Information():
         try:
             items = DB.rss_single_get_all()
             titles = []
             for item in items:
                 titles.append(item[4])
             for title in titles:
-                time.sleep(3)
+                time.sleep(1)
                 LOG_INFO('Start Refresh Bangumi Data:', title)
                 subject_id = Bangumi_Helper.Get_SubjectID_By_Name(title)
                 LOG_INFO('Bangumi ID:', subject_id)

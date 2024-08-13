@@ -432,3 +432,21 @@ class DB:
             LOG_ERROR('download_status_delete_by_rss_single_id',e)
         finally:
             conn.close()
+            
+    @staticmethod
+    def get_rss_link_by_bangumi_title(bangumi_title):
+        conn = sqlite3.connect(DB.db_file)
+        c = conn.cursor()
+        try:
+
+            c.execute(
+                "select link FROM rss_single WHERE bangumi_title = ?",
+                (bangumi_title,)
+            )
+            data = c.fetchall()
+            conn.commit()
+            return data[0][0]
+        except sqlite3.Error as e:
+            LOG_ERROR('get_rss_link_by_bangumi_title',e)
+        finally:
+            conn.close()
