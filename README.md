@@ -72,6 +72,6 @@ docker run -d \
 -v /path/to/your/bangumi/cover:/app/img \
 -p 1888:80 \
 -p 18964:18964 \ #"The backend address, visit /docs to view the API documentation."
-easybangumi
+plsy1/easybangumi
 ```
 
