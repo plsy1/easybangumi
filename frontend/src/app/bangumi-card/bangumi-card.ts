@@ -80,7 +80,7 @@ export class bangumiCard implements OnInit {
         if (this.BangumiInfo && this.BangumiInfo.id) {
           const baseUrl = 'https://bgm.tv/subject/';
           const url = `${baseUrl}${this.BangumiInfo.id}`;
-          window.open(url, '_blank'); // 在新标签页中打开 URL
+          window.open(url, '_blank'); 
         } else {
           console.error('BangumiInfo or ID is not available');
         }

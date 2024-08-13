@@ -191,9 +191,9 @@ class Bangumi_Helper:
                 for chunk in response.iter_content(chunk_size=8192):
                     file.write(chunk)
             
-            print(f"Image saved as {file_name}")
+            LOG_INFO(f"Image saved as {file_name}")
         else:
-            print("Failed to download image")
+            LOG_ERROR("Failed to download image")
             
     @staticmethod        
     def get_bangumi_id_from_url(url):
@@ -224,7 +224,7 @@ class Bangumi:
             Bangumi_Helper.download_image(url,title)
             
         except Exception as e:
-            LOG_ERROR("Init Episodes Information failed:",e)
+            LOG_ERROR("Init_Episodes_Information_By_RSS_Link","Init Episodes Information failed:",e)
             
     @staticmethod
     def Refresh_Episodes_Information_By_Bangumi_Title(bangumi_title):
@@ -232,7 +232,6 @@ class Bangumi:
             link = Bangumi_Helper.Get_Link_By_Bangumi_Title(bangumi_title)
             subject_id = Bangumi_Helper.get_SubjectID_From_Link(link)
             subject_id = str(subject_id)
-            print(subject_id)
             episodes = Bangumi_Helper.Get_Episodes_By_SubjectID(subject_id)
             total_episodes = Bangumi_Helper.Get_Total_Episodes_By_SubjectID(subject_id)
             LOG_INFO('Total Episodes:',total_episodes)
@@ -243,33 +242,24 @@ class Bangumi:
             url = Bangumi_Helper.Get_Subject_Image_Url_By_SubjectID(subject_id)
             Bangumi_Helper.download_image(url,bangumi_title)
         except Exception as e:
-            LOG_ERROR("Refresh Episodes Information failed:",e)   
+            LOG_ERROR("Refresh_Episodes_Information_By_Bangumi_Title","Refresh Episodes Information failed:",e)   
         
                    
     @staticmethod
     async def Refresh_Episodes_Information():
         try:
             items = DB.rss_single_get_all()
-            titles = []
             for item in items:
-                titles.append(item[4])
-            for title in titles:
-                time.sleep(1)
-                LOG_INFO('Start Refresh Bangumi Data:', title)
-                subject_id = Bangumi_Helper.Get_SubjectID_By_Name(title)
-                LOG_INFO('Bangumi ID:', subject_id)
-                if subject_id:
-                    episodes = Bangumi_Helper.Get_Episodes_By_SubjectID(subject_id)
-                    total_episodes = Bangumi_Helper.Get_Total_Episodes_By_SubjectID(subject_id)
-                    LOG_INFO('Total Episodes:',total_episodes)
-                    episodes_str = json.dumps(episodes)
-                    LOG_INFO('Episode ID:',episodes)
-                    DB.bangumi_update({"subject_name": title, "subject_id": subject_id, "episodes": episodes_str,"total_episodes": total_episodes})
-                    
-                    url = Bangumi_Helper.Get_Subject_Image_Url_By_SubjectID(subject_id)
-                    Bangumi_Helper.download_image(url,title)
+                link, title = item[1], item[4]
+                subject_id = Bangumi_Helper.get_SubjectID_From_Link(link)
+                episodes = Bangumi_Helper.Get_Episodes_By_SubjectID(subject_id)
+                total_episodes = Bangumi_Helper.Get_Total_Episodes_By_SubjectID(subject_id)
+                episodes_str = json.dumps(episodes)
+                DB.bangumi_update({"subject_name": title, "subject_id": subject_id, "episodes": episodes_str,"total_episodes": total_episodes})
+                url = Bangumi_Helper.Get_Subject_Image_Url_By_SubjectID(subject_id)
+                Bangumi_Helper.download_image(url,title)
         except Exception as e:
-            LOG_ERROR("Refresh Episodes Information failed:",e)   
+            LOG_ERROR("Refresh_Episodes_Information","Refresh Episodes Information failed:",e)   
                     
             
         
@@ -285,7 +275,7 @@ class Bangumi:
                 season = directories[-2]
                 bangumi_title = DB.rss_single_get_by_title_and_season(title,season)
             else:
-                LOG_ERROR("Can Not Find Bangumi Path.")
+                LOG_ERROR("Set_Episode_Watched","Can Not Find Bangumi Path.")
             
             if bangumi_title:
                 info = DB.bangumi_get_subject_info_by_subject_name(bangumi_title)
@@ -311,12 +301,12 @@ class Bangumi:
                 else:
                     bangumi_title = title
                     
-                print(bangumi_title)
+
                     
                 
                 subject_id = Bangumi_Helper.Get_SubjectID_By_Name(bangumi_title)
                 episodes_info = Bangumi_Helper.Get_Episodes_By_SubjectID(subject_id)
-                print(episodes_info)
+
                 total_episodes = Bangumi_Helper.Get_Total_Episodes_By_SubjectID(subject_id)
                 
                 if int(total_episodes) == int(episode):
@@ -367,12 +357,12 @@ class Bangumi:
                 else:
                     bangumi_title = title
                     
-                print(bangumi_title)
+
                     
                 
                 subject_id = Bangumi_Helper.Get_SubjectID_By_Name(bangumi_title)
                 episodes_info = Bangumi_Helper.Get_Episodes_By_SubjectID(subject_id)
-                print(episodes_info)
+
                 total_episodes = Bangumi_Helper.Get_Total_Episodes_By_SubjectID(subject_id)
                 
                 if int(total_episodes) == int(episode):

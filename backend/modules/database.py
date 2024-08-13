@@ -143,7 +143,7 @@ class DB:
                 )
                 conn.commit()
         except Exception as e:
-            print("Error:", e)
+            LOG_ERROR("Error:", e)
         finally:
             conn.close()
 
@@ -223,7 +223,7 @@ class DB:
             found_item = c.fetchone()
             return found_item is not None
         except Exception as e:
-            print("Error:", e)
+            LOG_ERROR("Error:", e)
         finally:
             conn.close()
 
@@ -295,7 +295,7 @@ class DB:
             rss_single = c.fetchone()
             return rss_single
         except Exception as e:
-            print("Error:", e)
+            LOG_ERROR("Error:", e)
         finally:
             conn.close()
 

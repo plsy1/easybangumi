@@ -128,25 +128,26 @@ class RSS:
         """将给定订阅的内容推送到下载器
         """        
     def Collect(url):
-        Items = Parse.Mikan(url)
-        if Items is  None:
-            return False
-        for Item in Items:
-            link = Item['link']
-            print(link)
-            bangumi_name = RSS_Helper.get_title_from_torrent_info_page_link(link)
-            print(bangumi_name)
-            season, title = split_season_title(bangumi_name)
-            if not all([link, title, season]):
-                LOG_ERROR(f"{RSS_INFO.FAILEDRSS.value} {link}")
-                return
-            root_folder = RSS.config.get('root_folder')
-            Path = os.path.join(root_folder, title, season)
-            if RSS.Push_torrent_file_to_downloader(Item,Path) == True:
-                if conf.Telegram:
-                    TGBOT.Send_Message(f"【番剧更新提醒】\n{bangumi_name}  更新了。")   
-                    
-        return True
+        try:
+            Items = Parse.Mikan(url)
+            if Items is  None:
+                return False
+            for Item in Items:
+                link = Item['link']
+                bangumi_name = RSS_Helper.get_title_from_torrent_info_page_link(link)
+                season, title = split_season_title(bangumi_name)
+                if not all([link, title, season]):
+                    LOG_ERROR(f"{RSS_INFO.FAILEDRSS.value} {link}")
+                    return
+                root_folder = RSS.config.get('root_folder')
+                Path = os.path.join(root_folder, title, season)
+                if RSS.Push_torrent_file_to_downloader(Item,Path) == True:
+                    if conf.Telegram:
+                        TGBOT.Send_Message(f"【番剧更新】\n{bangumi_name}  更新了。")   
+                        
+            return True
+        except Exception as e:
+            LOG_ERROR("RSS Collect",e)
             
         """订阅刷新
         """            
@@ -168,7 +169,6 @@ class RSS:
                         continue;
                     item = (link,title,season,bangumi_title)
                     DB.rss_single_insert(item)
-                    #Bangumi.Init_Episodes_Information_By_Bangumi_Title(bangumi_title)
                     LOG_INFO(f'{RSS_INFO.FINDRSS.value} {bangumi_title}')
             single_links = DB.rss_single_get_all()
             for single_link in single_links:

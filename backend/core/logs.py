@@ -1,14 +1,12 @@
-import logging
+import logging, os, sys
 from logging.handlers import TimedRotatingFileHandler
-import datetime
-import os, sys
 
 log_dir = "logs"
 
 if getattr(sys, "frozen", False):  # 检查是否是打包后的运行环境
 
     project_root = os.path.dirname(sys.argv[0])
-    print(f"Running in frozen environment. Config file path: {project_root}")
+    LOG_INFO(f"Running in frozen environment. Config file path: {project_root}")
 
 else:
     project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))

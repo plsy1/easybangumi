@@ -80,7 +80,7 @@ export class HomeComponent implements OnInit {
     this.ngSimpleSidebarService.open();
     this.ngSimpleSidebarService.close();
 
-    
+
   }
 
   constructor(private ngSimpleSidebarService: NgSimpleSidebarService) {
@@ -106,7 +106,7 @@ export class HomeComponent implements OnInit {
   }
 
   addSubscription() {
-    const dialogRef = this.dialog.open(SubscriptionDialogComponent,{
+    const dialogRef = this.dialog.open(SubscriptionDialogComponent, {
       data: {
         title: '添加订阅',
         type: '1'
@@ -123,7 +123,7 @@ export class HomeComponent implements OnInit {
   }
 
   collectSubscription() {
-    const dialogRef = this.dialog.open(SubscriptionDialogComponent,{
+    const dialogRef = this.dialog.open(SubscriptionDialogComponent, {
       data: {
         title: '收集订阅',
         type: '2'

@@ -10,10 +10,8 @@ class Parse:
             if response.status_code == 200:
                 item_data = []
                 rss_content = response.content.decode("utf-8")
-                print(rss_content)
                 xml_tree = ET.fromstring(rss_content)
                 items = xml_tree.findall(".//item")
-                print(items)
                 for item in items:
                     title = item.find("title").text
                     link = item.find("link").text
@@ -22,7 +20,7 @@ class Parse:
                     item_data.append(
                         {"title": title, "link": link, "torrent_url": torrent_url}
                     )
-                return None
+                return item_data
         except Exception as e:
             LOG_ERROR(e)
             return None
