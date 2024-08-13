@@ -162,14 +162,18 @@ class RSS:
                     if DB.rss_items_is_link_exist_and_pushed(Item['link']):
                         continue;
                     link = RSS_Helper.get_rss_link_from_torrent_info_page_link(Item['link'])
+                    if DB.rss_single_is_link_exist(link):
+                        continue;
                     bangumi_title = RSS_Helper.get_title_from_torrent_info_page_link(Item['link'])
                     season, title = split_season_title(bangumi_title)
                     if not all([link,title,season,bangumi_title]):
                         LOG_ERROR(f"{RSS_INFO.FAILEDRSS.value} {Item['link']}")
                         continue;
                     item = (link,title,season,bangumi_title)
-                    DB.rss_single_insert(item)
                     LOG_INFO(f'{RSS_INFO.FINDRSS.value} {bangumi_title}')
+                    DB.rss_single_insert(item)
+                    Bangumi.Init_Episodes_Information_By_RSS_Link(bangumi_title,link)
+                    
             single_links = DB.rss_single_get_all()
             for single_link in single_links:
                 LOG_INFO(f'{RSS_INFO.REFRESH.value} {single_link[4]}')
