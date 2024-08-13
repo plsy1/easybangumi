@@ -30,6 +30,7 @@ RUN chmod +x /app/start.sh
 
 RUN mkdir -p /app/conf
 RUN mkdir -p /app/data
+RUN mkdir -p /app/img
 
 
 ##暴露端口
