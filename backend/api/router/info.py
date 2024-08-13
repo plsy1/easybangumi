@@ -6,6 +6,7 @@ import os, json
 from fastapi.responses import JSONResponse
 import glob
 from core.logs import LOG_ERROR, LOG_INFO
+from core.rss import RSS_Helper
 router = APIRouter()
 
 @router.get("/getBangumiSubscription", summary="获取订阅中的番剧信息", description="""
@@ -80,6 +81,13 @@ async def get_bangumi_info(bangumi_title):
 
 @router.get("/nowcwd", summary="", description="""
 """)
-async def get_bangumi_info():
+async def nowcwd():
     current_directory = os.getcwd()
     return JSONResponse(content={"dir": current_directory}, status_code=200)
+
+
+@router.get("/renameTorrents", summary="", description="""
+""")
+async def renameTorrents():
+    RSS_Helper.Torrents_File_Rename()
+    return JSONResponse(content={"result": 'true'}, status_code=200)

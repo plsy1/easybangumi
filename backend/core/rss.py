@@ -69,7 +69,20 @@ class RSS_Helper():
     @staticmethod
     def Torrents_File_Rename():
         try:
-            torrents = QB.qb.torrents_info()
+            torrents = None
+            while True:
+                torrents = QB.qb.torrents_info()
+                has_files = False
+                for torrent in torrents:
+                    torrent_hash = torrent.get("hash")
+                    files = QB.get_torrent_file_by_hash(torrent_hash)
+                    if files: 
+                        has_files = True
+                        break
+                if has_files:
+                    break
+
+
             for torrent in torrents:
                 tags = torrent.get('tags')
                 tags = tags.split(', ')
@@ -95,10 +108,10 @@ class RSS_Helper():
                         LOG_ERROR(
                             "File name not found for torrent hash: ", torrent_hash
                         )
-                QB.add_tag_by_hash(tag='已整理', hash = torrent_hash)
+                QB.add_tag_by_hash(tag='已整理', hash=torrent_hash)
 
         except Exception as e:
-            LOG_ERROR("An error occurred: ", e)   
+            LOG_ERROR("An error occurred: ", e)
         
 
 class RSS:

@@ -3,13 +3,11 @@ import os
 from core.logs import *
 
 
+
 def EpisodeReName_get_episode_name(name):
-    original_dir = os.getcwd()  # 保存原始工作目录
     try:
-        script_dir = os.path.dirname(os.path.abspath(__file__))
-        os.chdir(script_dir)  # 切换到脚本所在目录
         result = subprocess.run(
-            ["python", "EpisodeReName/EpisodeReName.py", name],
+            ["python", "utils/thirdparty/EpisodeReName/EpisodeReName.py", name],
             capture_output=True,
             text=True,
         )
@@ -21,5 +19,5 @@ def EpisodeReName_get_episode_name(name):
         else:
             LOG_ERROR("Error:", result.stderr)
             return None
-    finally:
-        os.chdir(original_dir)  # 恢复原始工作目录
+    except Exception as e:
+        LOG_ERROR("EpisodeReName_get_episode_name",e)
