@@ -7,7 +7,7 @@ from core.logs import *
 def EpisodeReName_get_episode_name(name):
     try:
         result = subprocess.run(
-            ["python", "utils/thirdparty/EpisodeReName/EpisodeReName.py", name],
+            ["python3", "utils/thirdparty/EpisodeReName/EpisodeReName.py", name],
             capture_output=True,
             text=True,
         )
