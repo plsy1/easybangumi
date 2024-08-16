@@ -6,12 +6,13 @@ from core.logs import *
 class DB:
 
     data_dir = "data"
-    # data_dir = 'data'
-    file_name = conf.get_database_config().get("name")
+    file_name = "data.db"
     db_file = os.path.join(data_dir, file_name)
 
     @staticmethod
-    def create_table():
+    def Init():
+        if not os.path.exists(DB.data_dir):
+            os.makedirs(DB.data_dir)
         conn = sqlite3.connect(DB.db_file)
         c = conn.cursor()
 

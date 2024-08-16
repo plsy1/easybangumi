@@ -24,8 +24,8 @@ import { CommonModule } from '@angular/common';
 export class SubscriptionDialogComponent {
   subscriptionType: string = '1';
   subscriptionText: string = '';
-  private apiUrlAdd = 'http://localhost:12450/api/v1/rss/add';
-  private apiUrlCollect = 'http://localhost:12450/api/v1/rss/collect';
+  private apiUrlAdd = '/api/v1/rss/add';
+  private apiUrlCollect = '/api/v1/rss/collect';
 
   @Output() subscriptionAdded = new EventEmitter<void>();
 

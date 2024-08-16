@@ -174,7 +174,7 @@ class Bangumi_Helper:
             LOG_ERROR(f"Request failed: {e}")
 
     @staticmethod
-    def download_image(url: str, subject_id: int, save_directory: str = "img"):
+    def download_image(url: str, subject_id: int, save_directory: str = "data/img"):
         if not os.path.exists(save_directory):
             os.makedirs(save_directory)
         

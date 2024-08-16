@@ -14,7 +14,7 @@ import { NgSimpleSidebarModule, NgSimpleSidebarService, SimpleSidebarPosition, S
 export class SystemInfoComponent implements OnInit, OnDestroy {
   logData?: LogsData;  // 用于存储日志数据
   loading = true;   // 加载状态
-  private apiUrl = 'http://localhost:12450/api/v1/info/getSystemLogs'; 
+  private apiUrl = '/api/v1/info/getSystemLogs'; 
   private intervalId?: number; // 定时器ID
   sidebarItems: SimpleSidebarItem[] = [];
 

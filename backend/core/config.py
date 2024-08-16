@@ -52,7 +52,7 @@ class ConfigManager:
     def check_loaded(self):
         if self.get_telegram_config() is not None:
             self.Telegram = True
-    
+
     def get_telegram_config(self):
         telegram_config = self.config.get("telegram")
         if telegram_config is None:
@@ -72,7 +72,7 @@ class ConfigManager:
                 LOG_ERROR(f"缺少qBittorrent配置项: {key}")
                 return None
         default_qbittorrent_config = {
-            "category": "easybangumi",
+            "tag": "easybangumi",
         }
         qbittorrent_config = {**default_qbittorrent_config, **qbittorrent_config}
         return qbittorrent_config
@@ -88,11 +88,7 @@ class ConfigManager:
             rss_config["scrape"] = "TMDB"
         return rss_config
 
-    def get_database_config(self):
-        database_config = self.config.get("database", {"name": "data.db"})
-        return database_config
-    
-    
+
     def get_bangumi_config(self):
         bangumi_config = self.config.get("bangumi", {})
         required_keys = ["token"]

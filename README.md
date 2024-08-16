@@ -63,15 +63,11 @@ docker run -d \
 -e QBITTORRENT_USERNAME="admin" \
 -e QBITTORRENT_PASSWORD="admin" \
 -e QBITTORRENT_ROOT_FOLDER="/path" \
--e QBITTORRENT_TAG="easybangumi" \ #optional
--e DATABASE_NAME="data.db" \ #optional
 -e RSS_URL="your account rss url" \
 -e RSS_SCRAPE="TMDB" \ #optional
 -e BANGUMI_TOKEN="your token" \ #optional
--v /path/to/your/data.db:/app/data.db \
--v /path/to/your/bangumi/cover:/app/img \
--p 1888:80 \
--p 18964:18964 \ #"The backend address, visit /docs to view the API documentation."
+-v /path/to/your/data:/app/data \
+-p 12450:12450 \ #"The backend address, visit /docs to view the API documentation."
 plsy1/easybangumi
 ```
 

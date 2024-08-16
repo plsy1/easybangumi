@@ -8,10 +8,10 @@ from core.rss import RSS
 from modules.database import DB
 
 def init():
-    init_routers()
-    DB.create_table()
+    DB.Init()
     RSS.Init()
-    Scheduler.run_scheduler()
+    Scheduler.Start()
+    initRouter()
 
 
 
@@ -36,7 +36,7 @@ Config = uvicorn.Config(App, host="0.0.0.0", port=8964, log_level="info", reload
 Server = uvicorn.Server(Config)
 
 
-def init_routers():
+def initRouter():
     from api.api import api_router
     App.include_router(api_router, prefix="/api/v1")
     

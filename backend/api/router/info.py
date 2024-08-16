@@ -24,7 +24,7 @@ async def get_bangumi_subscription():
 """)
 async def get_bangumi_cover_by_name(name):
     # 定义 img 目录路径
-    img_directory = "img"
+    img_directory = "data/img"
     # 遍历目录查找匹配的文件
     for filename in os.listdir(img_directory):
         if filename.startswith(f"{name}."):

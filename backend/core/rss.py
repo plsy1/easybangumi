@@ -86,7 +86,7 @@ class RSS_Helper():
             for torrent in torrents:
                 tags = torrent.get('tags')
                 tags = tags.split(', ')
-                if conf.config['qbittorrent']['tag'] not in tags: continue
+                if conf.get_qbittorrent_config().get('tag') not in tags: continue
                 if '已整理' in tags: continue
                 torrent_hash = torrent.get("hash")
                 save_path = torrent.get("save_path")

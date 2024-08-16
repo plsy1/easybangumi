@@ -16,7 +16,7 @@ class QB:
     )
 
     @staticmethod
-    def add_torrent_url(download_link, save_path, tags=conf.config['qbittorrent']['tag']):
+    def add_torrent_url(download_link, save_path, tags=conf.get_qbittorrent_config().get('tag')):
         try:
             torrent_options = {
                 "urls": download_link,
@@ -29,7 +29,7 @@ class QB:
             return False
 
     @staticmethod
-    def add_torrent_file(torrent_name, torrent_data, save_path, tags=conf.config['qbittorrent']['tag']):
+    def add_torrent_file(torrent_name, torrent_data, save_path, tags=conf.get_qbittorrent_config().get('tag')):
         try:
             torrent_bytes = torrent_data.getvalue()
             torrent_options = {

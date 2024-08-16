@@ -8,7 +8,7 @@ export class CardService {
 
   constructor() { }
 
-  url = 'http://localhost:12450/api/v1/info/getBangumiSubscription';
+  url = '/api/v1/info/getBangumiSubscription';
 
   async getAllCards(): Promise<cardData[]> {
     try {

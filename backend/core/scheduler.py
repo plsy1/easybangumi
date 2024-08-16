@@ -9,7 +9,7 @@ import threading
 
 class Scheduler:
 
-    def run_scheduler():
+    def Start():
         scheduler_thread = threading.Thread(target=Scheduler.Run, daemon=True)
         scheduler_thread.start()
 
