@@ -28,7 +28,6 @@
 - 👤 **QBITTORRENT_USERNAME**: Username
 - 🔒 **QBITTORRENT_PASSWORD**: Password
 - 📁 **QBITTORRENT_ROOT_FOLDER**: Root directory where anime will be downloaded
-- 🔖 **QBITTORRENT_TAG**: Torrent tag, optional, default is easybangumi
 
 ### RSS
 
