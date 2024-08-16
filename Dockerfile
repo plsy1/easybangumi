@@ -2,14 +2,11 @@ FROM nginx
 
 COPY  /frontend/dist/my-app/browser /usr/share/nginx/html
 
-## 安装supervisor
 RUN apt-get update && \
     apt-get install -y iproute2 supervisor python3 python3-pip && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-
-##构建后端
 
 WORKDIR /app
 COPY /backend /app
@@ -28,4 +25,5 @@ RUN mkdir -p /app/img
 EXPOSE 80 18964
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY nginx.conf /etc/nginx/nginx.conf
 CMD ["bash", "start.sh"]
