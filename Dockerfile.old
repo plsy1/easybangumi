@@ -1,6 +1,15 @@
+##构建前端
+FROM node AS builder
+
+WORKDIR /frontend
+COPY /frontend /frontend
+
+RUN yarn && yarn run build
+
+
 FROM nginx
 
-COPY  /frontend/dist/my-app/browser /usr/share/nginx/html
+COPY --from=builder /frontend/dist/my-app/browser /usr/share/nginx/html
 
 ## 安装supervisor
 RUN apt-get update && \
@@ -29,3 +38,4 @@ EXPOSE 80 18964
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 CMD ["bash", "start.sh"]
+
