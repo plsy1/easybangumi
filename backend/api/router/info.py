@@ -41,7 +41,7 @@ async def get_bangumi_cover_by_name(name):
 @router.get("/getSystemLogs", summary="获取系统日志", description="""
 """)
 async def get_system_logs():
-    log_file = os.path.join("logs", "backend.log")
+    log_file = os.path.join("log", "backend.log")
 
     # 检查日志文件是否存在
     if not os.path.exists(log_file):
