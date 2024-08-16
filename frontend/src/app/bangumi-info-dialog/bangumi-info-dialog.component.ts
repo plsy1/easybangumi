@@ -17,7 +17,7 @@ export class BangumiInfoDialogComponent {
     @Inject(MAT_DIALOG_DATA) public data: { title: string; season: string; img: string; id: string }
   ) {}
 
-  private apiUrl = 'http://localhost:18964/api/v1/rss/delete';
+  private apiUrl = 'http://localhost:12450/api/v1/rss/delete';
 
   @Output() subscriptionDeleted = new EventEmitter<void>();
 

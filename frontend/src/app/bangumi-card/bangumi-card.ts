@@ -26,8 +26,8 @@ export class bangumiCard implements OnInit {
   @Output() subscriptionDeleted = new EventEmitter<string>();
   imageUrl: string | null = null;
 
-  private apiUrlGetCover = 'http://localhost:18964/api/v1/info/getBangumiCover';
-  private apiUrlGetBangumiInfo = 'http://localhost:18964/api/v1/info/getBangumiInfo';
+  private apiUrlGetCover = 'http://localhost:12450/api/v1/info/getBangumiCover';
+  private apiUrlGetBangumiInfo = 'http://localhost:12450/api/v1/info/getBangumiInfo';
 
   constructor(private dialog: MatDialog) {}
 
