@@ -31,7 +31,7 @@ App.add_middleware(
     allow_headers=["*"],
 )
 
-Config = uvicorn.Config(App, host="0.0.0.0", port=18964, log_level="info", reload=False,)
+Config = uvicorn.Config(App, host="0.0.0.0", port=8964, log_level="info", reload=False,)
 
 Server = uvicorn.Server(Config)
 

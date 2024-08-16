@@ -22,7 +22,7 @@ RUN mkdir -p /app/img
 
 
 ##暴露端口
-EXPOSE 80 18964
+EXPOSE 12450
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY nginx.conf /etc/nginx/nginx.conf
