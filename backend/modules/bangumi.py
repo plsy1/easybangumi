@@ -246,7 +246,7 @@ class Bangumi:
         
                    
     @staticmethod
-    async def Refresh_Episodes_Information():
+    def Refresh_Episodes_Information():
         try:
             items = DB.rss_single_get_all()
             for item in items:
